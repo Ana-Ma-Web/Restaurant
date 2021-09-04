@@ -1,0 +1,226 @@
+@charset "UTF-8";
+/*Обнуление*/
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700,900);
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Yeseva+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul[class], ol[class] {
+  list-style: none;
+}
+
+ol {
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+body, h1, h2, h3, h4, p, ul[class], ol[class], li, figure, figcaption, blockquote, dl, dd {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/*--------------------*/
+:root {
+  --header-height: 6.25rem;
+  --hue-color: 352;
+  --first-color: hsl(var(--hue-color), 100%, 45%);
+  --first-color-alt: hsl(var(--hue-color), 100%, 35%);
+  --first-color-light: hsl(var(--hue-color), 99%. 60%);
+  --input-color-bg: hsl(0, 0%, 90%);
+  --input-color-text: hsla(0, 0%, 20%, .5);
+  --body-color: hsl(0, 0%, 100%);
+  --text-color: hsl(0, 0%, 0%);
+  --text-color-alt: hsl(0, 0%, 20%);
+  --text-color-light: hsla(0, 0%, 100%, .9);
+  --title-color: hsl(0, 0%, 0%);
+  --line-color: hsla(0, 0%, 100%, .2);
+  --border-color: hsla(0, 0%, 100%, .5);
+  --bg-fill-color: hsla(0, 0%, 0%, .6);
+  --footer-color: hsla(0, 0%, 0%, .9);
+  --z-bg: -1;
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --body-font: 'Open Sans', sans-serif;
+  --title-font: 'Yeseva One', cursive;
+  --h1-font-size: 4.375rem;
+  --h2-font-size: 1.625rem;
+  --large-font-size: 1.125rem;
+  --normal-font-size: .875rem;
+  --small-font-size: .75rem;
+  --font-bold: 700;
+}
+
+body {
+  font-family: var(--body-font);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  height: var(--header-height);
+}
+
+.nav {
+  height: 100%;
+}
+
+.nav__menu {
+  height: 100%;
+}
+
+.nav__list {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav__logo {
+  height: 150px;
+  width: 150px;
+  background-image: url(../img/logo.svg);
+  margin-top: 50%;
+}
+
+.nav__link, .button {
+  font-family: var(--body-font);
+  text-transform: uppercase;
+  font-weight: var(--font-bold);
+  color: white;
+}
+
+.home {
+  position: relative;
+  color: white;
+  height: -webkit-calc(100vh - var(--header-height));
+  height: calc(100vh - var(--header-height));
+}
+
+.home__container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.home__opening-hours {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.img-bg {
+  position: absolute;
+  z-index: var(--z-bg);
+  overflow: hidden;
+}
+
+.img-bg__cover {
+  background-color: var(--bg-fill-color);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}

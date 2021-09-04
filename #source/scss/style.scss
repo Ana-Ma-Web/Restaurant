@@ -1,0 +1,197 @@
+// Файл обнуляющих стилей
+@import "nullstyle.scss";
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700,900);
+
+@mixin flexbox() {display: -webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;font-size: 0;}
+
+
+
+//Шрифты
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Yeseva+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+
+//Переменные
+:root {
+   --header-height: 6.25rem;
+
+      // ========== HSL color mode ===========
+   // Mustard: 50, Bronze: 35, Cherry: 352;
+   --hue-color: 352;
+   --first-color: hsl(var(--hue-color), 100%, 45%);
+   --first-color-alt: hsl(var(--hue-color), 100%, 35%);
+   --first-color-light: hsl(var(--hue-color), 99%. 60%);
+   --input-color-bg: hsl(0, 0%, 90%);
+   --input-color-text: hsla(0, 0%, 20%, .5);
+   --body-color: hsl(0, 0%, 100%);
+   --text-color: hsl(0, 0%, 0%);
+   --text-color-alt: hsl(0, 0%, 20%);
+   --text-color-light: hsla(0, 0%, 100%, .9);
+   --title-color: hsl(0, 0%, 0%);
+   --line-color: hsla(0, 0%, 100%, .2);
+   --border-color: hsla(0, 0%, 100%, .5);
+   --bg-fill-color: hsla(0, 0%, 0%, .6);
+   --footer-color: hsla(0, 0%, 0%, .9);
+
+      // ========== Z-index ==========
+   --z-bg: -1;
+   --z-tooltip: 10;
+   --z-fixed: 100;
+
+      // ========== Font ===========
+   --body-font: 'Open Sans', sans-serif;
+   --title-font: 'Yeseva One', cursive;
+   --h1-font-size: 4.375rem; //70px
+   --h2-font-size: 1.625rem; //26px
+   --large-font-size: 1.125rem; //18px
+   --normal-font-size: .875rem; //14px
+   --small-font-size: .75rem; //12px
+
+      // ========== Font weight ===========
+   --font-bold: 700;
+   }
+
+
+// =========== BUTTONS ===========
+
+
+// ========== BASE ==========
+
+body {
+   font-family: var(--body-font);
+   // font-size: var(--normal-font-size);
+   background-color: var(--body-color);
+   color: var(--text-color);
+}
+
+
+.container {
+   max-width: 1280px;
+   margin: 0 auto;
+}
+
+      // ========== HEADER ===========
+.header {
+   width: 100%;
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: var(--z-fixed);
+   height: var(--header-height);
+   
+
+}
+
+.nav {
+   height: 100%;
+
+   &__menu {
+      height: 100%;
+   }
+
+   &__list {
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   &__item {
+   }
+
+   &__link {
+   }
+
+   &__logo {
+      height: 150px;
+      width: 150px;
+      background-image: url(../img/logo.svg);
+      margin-top: 50%;
+   }
+}
+
+.nav__link, .button {
+   font-family: var(--body-font);
+   text-transform: uppercase;
+   font-weight: var(--font-bold);
+   color: white;
+}
+
+.active-link {
+}
+
+
+
+.home {
+   position: relative;
+   color: white;
+   height: calc(100vh - var(--header-height));
+
+
+   &__container {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+   }
+
+   &__opening-hours {
+      display: flex;
+      justify-content: space-between;
+   }
+
+   &__data {
+   }
+
+   &__title {
+   }
+
+   &__buttons {
+   }
+
+   &__arrow {
+   }
+
+   &__social {
+   }
+}
+
+.img-bg {
+   position: absolute;
+   z-index: var(--z-bg);
+   overflow: hidden;
+
+   &__cover{
+      background-color: var(--bg-fill-color);
+      height: 100%;
+      width: 100%;
+      position: absolute;
+   }
+}
+
+
+.container {
+}
+.button {
+
+   &_color {
+   }
+
+   &_alt {
+   }
+}
+.social {
+
+   &__item {
+   }
+
+   &__link {
+   }
+}
+
+      // ========== BG IMAGE ===========
+
+
+
+
+
+
