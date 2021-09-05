@@ -16,7 +16,7 @@
 
       // ========== HSL color mode ===========
    // Mustard: 50, Bronze: 35, Cherry: 352;
-   --hue-color: 352;
+   --hue-color: 50;
    --first-color: hsl(var(--hue-color), 100%, 45%);
    --first-color-alt: hsl(var(--hue-color), 100%, 35%);
    --first-color-light: hsl(var(--hue-color), 99%. 60%);
@@ -40,7 +40,7 @@
       // ========== Font ===========
    --body-font: 'Open Sans', sans-serif;
    --title-font: 'Yeseva One', cursive;
-   --h1-font-size: 4.375rem; //70px
+   --h1-font-size: 70px; //70px 4.375
    --h2-font-size: 1.625rem; //26px
    --large-font-size: 1.125rem; //18px
    --normal-font-size: .875rem; //14px
@@ -50,8 +50,6 @@
    --font-bold: 700;
    }
 
-
-// =========== BUTTONS ===========
 
 
 // ========== BASE ==========
@@ -63,6 +61,36 @@ body {
    color: var(--text-color);
 }
 
+h1, h2 {
+   font-family: var(--title-font);
+   text-transform: uppercase;
+}
+h1 {
+   font-size: var(--h1-font-size);
+}
+
+// =========== BUTTONS ===========
+.button {
+   // display: block;
+   height: 3.75rem; //60px
+   width: 12.5rem; //200px
+   border-radius: 5px;
+   // padding-top: 1.3rem;
+   font-size: var(--small-font-size);
+   border-width: 1px;
+   border-style: solid;
+   cursor: pointer;
+
+   &_color {
+      background-color: var(--first-color);
+      border-color: var(--first-color);
+   }
+
+   &_alt {
+      border-color: var(--border-color);
+      background-color: Transparent;
+   }
+}
 
 .container {
    max-width: 1280px;
@@ -119,26 +147,27 @@ body {
 .active-link {
 }
 
-
-
-.home {
+      // ========== HOME SECTION ===========
+      .home {
    position: relative;
    color: white;
-   height: calc(100vh - var(--header-height));
-
+   // height: calc(100vh - var(--header-height));
+   height: 100%;
+   overflow: hidden;
 
    &__container {
       display: flex;
       justify-content: space-between;
       padding-top: var(--header-height);
-      height: 100%;
+      height: 100vh;
       align-items: center;
    }
 
-
-
+         // ========== HOME LEFT ===========
 
    &__opening-hours {
+      height: 10%;
+
       transform-origin: top left;
       transform: rotate(-90deg);
       display: flex;
@@ -147,12 +176,9 @@ body {
       align-self: end;
       max-width: 20%;
 
-
-
          &_days {
             margin-left: 15vh;
             min-width: 30vh;
-            
 
          }
          &_hours{
@@ -160,77 +186,92 @@ body {
          }
    }
 
+         // ========== HOME MIDDLE ===========
+
    &__data {
       flex-basis: 60%;
-   }
-
-   &__title {
+      display: flex;
+      flex-direction: column;
+      height: 90%;
+      justify-content: space-between;
+      text-align: center;
    }
 
    &__buttons {
-   }
-
-   &__arrow {
+      margin-bottom: 50vh;
+      
    }
 
    &__social {
+      height: 30%;
       flex-basis: 20%;
       margin-left: auto;
-
-
    }
-   
+
+   &__arrow {
+      margin: 0 auto;
+   }
 }
 
+         // ========== HOME IMG ===========
 .img-bg {
    position: absolute;
    z-index: var(--z-bg);
    overflow: hidden;
-   height: 100vh;
-
-   &__cover{
-      background-color: var(--bg-fill-color);
-      height: 100%;
-      width: 100%;
-      position: absolute;
+   min-height: 100vh;
+      & img { 
+         filter: brightness(40%);
+         display:block; 
    }
 }
 
-
-.container {
+         // ========== HOME LINKS ===========
+.home__arrow-link,
+.social__link-facebook,
+.social__link-twitter,
+.social__link-instagram {
+   display: block;
+   width: 3.75rem;
+   height: 3.75rem;
+   border-width: 1px;
+   border-color: var(--border-color);
+   border-style: solid;
+   border-radius: 50%;
 }
-.button {
 
-   &_color {
-   }
-
-   &_alt {
-   }
+.social__link-facebook,
+.social__link-twitter,
+.social__link-instagram {
+   margin-bottom: 1.25rem;
 }
+
+         // ========== HOME SOCIAL ===========
+
 .social {
    position: relative;
 
-
-   &__links {
+   &__list {
       position: absolute;
       right: 0;
-
    }
 
-
-   &__item {
-      display: block;
-      width: 3.75rem;
-      height: 3.75rem;
-      border-width: 1px;
-      border-color: var(--border-color);
-      border-style: solid;
-      border-radius: 50%;
+   &__link-facebook {
+      background: url('../img/icons/facebook.svg') center no-repeat;
    }
-
+   &__link-twitter {
+      background: url('../img/icons/twitter.svg') center no-repeat;
+   }
+   &__link-instagram {
+      background: url('../img/icons/instagram.svg') center no-repeat;
+}
 }
 
-      // ========== BG IMAGE ===========
+         // ========== HOME ARROW ===========
+
+.home__arrow-link {
+   background: url('../img/icons/down-btn.svg') center no-repeat;
+}
+
 
 
 

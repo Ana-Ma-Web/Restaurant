@@ -45,9 +45,7 @@
             </nav>
         </header>
         <section class="home" id="home">
-            <div class="home__img img-bg">
-                <div class="img-bg__cover"></div>
-
+            <div class="home__img-bg img-bg">
                 <picture>
                     <source srcset="img/bg/home-6000x4000.jpg" type="image/jpeg" media="(min-width:3840px)">
                     <source srcset="img/bg/home-3840x2560.jpg" type="image/jpeg" media="(min-width:2560px)">
@@ -57,39 +55,33 @@
                     <source srcset="img/bg/home-425x283.jpg" type="image/jpeg" media="(max-width:425px)">
                     <img src="img/bg/home-1920x12801.jpg" alt="home">
                 </picture>
-
             </div>
             <div class="home__container container">
-                <!-- <div class="home__opening-hours_wrapper"> -->
-                    <div class="home__opening-hours">
-                        <div class="home__opening-hours_days">Mon - Fri: 8PM - 10PM, Sat</div>
-                        <div class="home__opening-hours_hours">: 8PM - 3AM</div>
-                    </div>
-                <!-- </div> -->
+                <div class="home__opening-hours">
+                    <div class="home__opening-hours_days">Mon - Fri: 8PM - 10PM, Sat</div>
+                    <div class="home__opening-hours_hours">: 8PM - 3AM</div>
+                </div>
                 <div class="home__data">
-                    <div class="home__title">restaurant</div>
+                    <h1>restaurant</h1>
                     <div class="home__buttons">
-                        <div class="button button_color">book table</div>
-                        <div class="button button_alt">explore</div>
+                        <button class="button button_color">book table</button>
+                        <button class="button button_alt">explore</button>
                     </div>
-                    <div class="home__arrow"></div>
+                    <div class="home__arrow">
+                        <a href="" class="home__arrow-link"></a>
+                    </div>
                 </div>
                 <div class="home__social">
                     <div class="social">
-                        <ul class="social__links">
-                            <li class="social__item">
-                                <i class="ri-facebook-fill"></i>
-                            </li>
-                            <li class="social__item">
-                                <i class="ri-twitter-fill"></i>
-                            </li>
-                            <li class="social__item">
-                                <i class="ri-instagram-line"></i>
-                            </li>
-                        </ul>
+                        <div class="social__list">
+                            <a href="" class="social__link-facebook"></a>
+                            <a href="" class="social__link-twitter"></a>
+                            <a href="" class="social__link-instagram"></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+        <script src="js/main.js"></script>
     </body>
 </html>
