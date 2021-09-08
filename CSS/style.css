@@ -262,35 +262,31 @@ hr {
 }
 
 .home__opening-hours {
-  height: 10%;
+  -webkit-flex-basis: 20%;
+      -ms-flex-preferred-size: 20%;
+          flex-basis: 20%;
+  position: relative;
+  font-size: var(--small-font-size);
+  letter-spacing: .1rem;
+}
+
+.home__opening-hours div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: -webkit-calc(var(--header-height) + 4.5rem);
+  margin-top: calc(var(--header-height) + 4.5rem);
+  min-width: 24rem;
   -webkit-transform-origin: top left;
       -ms-transform-origin: top left;
           transform-origin: top left;
   -webkit-transform: rotate(-90deg);
       -ms-transform: rotate(-90deg);
           transform: rotate(-90deg);
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  position: relative;
-  -webkit-align-self: end;
-      -ms-flex-item-align: end;
-          align-self: end;
-  max-width: 20%;
-}
-
-.home__opening-hours_days {
-  margin-left: 15vh;
-  min-width: 30vh;
 }
 
 .home__opening-hours_hours {
-  min-width: 10vh;
+  margin-left: 4.4375rem;
 }
 
 .home__data {
@@ -468,5 +464,6 @@ hr {
 }
 
 .reverse img {
+  margin-left: auto;
   margin-left: auto;
 }
