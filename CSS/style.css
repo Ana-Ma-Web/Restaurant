@@ -124,6 +124,10 @@ body {
   color: var(--text-color);
 }
 
+section {
+  overflow: hidden;
+}
+
 h1, h2 {
   font-family: var(--title-font);
   text-transform: uppercase;
@@ -131,6 +135,34 @@ h1, h2 {
 
 h1 {
   font-size: var(--h1-font-size);
+}
+
+h2 {
+  font-size: var(--h2-font-size);
+}
+
+.line {
+  height: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+hr {
+  width: 60px;
+  height: 5px;
+  background-color: var(--first-color);
+  -webkit-border-radius: 2.5px;
+          border-radius: 2.5px;
 }
 
 .button {
@@ -209,7 +241,6 @@ h1 {
 .home {
   position: relative;
   color: white;
-  height: 100%;
   overflow: hidden;
 }
 
@@ -223,7 +254,7 @@ h1 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-top: var(--header-height);
-  height: 100vh;
+  height: 1000px;
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
@@ -281,10 +312,17 @@ h1 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   text-align: center;
+  padding-bottom: 5%;
 }
 
 .home__buttons {
-  margin-bottom: 50vh;
+  -webkit-flex-basis: 65%;
+      -ms-flex-preferred-size: 65%;
+          flex-basis: 65%;
+}
+
+.home__arrow {
+  margin: 0 auto;
 }
 
 .home__social {
@@ -293,37 +331,6 @@ h1 {
       -ms-flex-preferred-size: 20%;
           flex-basis: 20%;
   margin-left: auto;
-}
-
-.home__arrow {
-  margin: 0 auto;
-}
-
-.img-bg {
-  position: absolute;
-  z-index: var(--z-bg);
-  overflow: hidden;
-  min-height: 100vh;
-}
-
-.img-bg img {
-  -webkit-filter: brightness(40%);
-          filter: brightness(40%);
-  display: block;
-}
-
-.home__arrow-link,
-.social__link-facebook,
-.social__link-twitter,
-.social__link-instagram {
-  display: block;
-  width: 3.75rem;
-  height: 3.75rem;
-  border-width: 1px;
-  border-color: var(--border-color);
-  border-style: solid;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
 }
 
 .social__link-facebook,
@@ -353,6 +360,113 @@ h1 {
   background: url("../img/icons/instagram.svg") center no-repeat;
 }
 
+.home__arrow-link,
+.social__link-facebook,
+.social__link-twitter,
+.social__link-instagram {
+  display: block;
+  width: 3.75rem;
+  height: 3.75rem;
+  border-width: 1px;
+  border-color: var(--border-color);
+  border-style: solid;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+}
+
 .home__arrow-link {
   background: url("../img/icons/down-btn.svg") center no-repeat;
+}
+
+.img-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: var(--z-bg);
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.img-bg img {
+  -webkit-filter: brightness(40%);
+          filter: brightness(40%);
+  display: block;
+}
+
+.content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 100px 0;
+}
+
+.content__info {
+  max-width: 640px;
+  text-align: center;
+  margin: auto 0;
+  padding: 0 20px;
+}
+
+.content__title {
+  font-weight: var(--font-bold);
+}
+
+.content__images {
+  position: relative;
+  width: 600px;
+}
+
+.content__img-square {
+  position: absolute;
+  top: 25%;
+  right: 0;
+  z-index: var(--z-tooltip);
+}
+
+.content__img-square svg {
+  stroke: var(--first-color);
+}
+
+.reverse {
+  width: 100%;
+  position: relative;
+}
+
+.reverse span {
+  display: block;
+  position: absolute;
+  height: 1rem;
+  width: 6.25rem;
+  top: 2rem;
+  left: -webkit-calc(50% - 3.175rem);
+  left: calc(50% - 3.175rem);
+  text-transform: uppercase;
+  color: white;
+}
+
+.reverse .home__img-bg {
+  width: 100%;
+}
+
+.reverse .content {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  color: white;
+}
+
+.reverse .content__img-square {
+  left: 0;
+}
+
+.reverse img {
+  margin-left: auto;
 }
