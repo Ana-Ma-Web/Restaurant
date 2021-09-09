@@ -127,7 +127,8 @@
                         </div>
                         <div class="content__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.</div>
                         <br>
-                        <div class="content__text">Integer ullamcorper neque eu purus euismod, ac faucibus mauris posuere. Morbi non ultrices ligula. Sed dictum, enim sed ullamcorper feugiat, dui odio vehicula eros, a sollicitudin lorem quam nec sem. Mauris tincidunt feugiat diam convallis pharetra. Nulla facilisis semper laoreet.</div>
+                        <div class="content__text">Integer ullamcorper neque eu purus euismod, ac faucibus mauris posuere. Morbi non ultrices ligula. Sed dictum, enim sed ullamcorper feugiat, dui odio vehicula eros, a sollicitudin lorem quam nec sem. Mauris tincidunt feugiat diam convallis pharetra. Nulla facilisis semper laoreet.
+                        </div>
 
                     </div>
                     <div class="content__images">
@@ -146,8 +147,43 @@
                 <div class="content container">
                     <div class="content__info">
                         <div class="content__form">
-                                <h2 class="content__h2">book a table</h2>
-                                <div class="line"><hr></div>
+                            <form action="" class="form">
+                                <div class="form__title">
+                                    <h2 class="content__h2">book a table</h2>
+                                    <div class="line"><hr></div>
+                                </div>
+                                
+                                <div class="form__columns">
+                                    <div class="form__column">
+                                        <div class="form__input">
+                                            <input placeholder="Name" type="text" class="input-item">
+                                        </div>
+                                        <div class="form__input">
+                                            <input placeholder="Phone" type="phone" class="input-item">
+                                        </div>
+                                        <div class="form__input">
+                                            <input placeholder="Date" type="text" class="input-item">
+                                        </div>
+                                    </div>
+                                    <div class="form__column">
+                                        <div class="form__input">
+                                            <input placeholder="Email" type="email" class="input-item">
+                                        </div>
+                                        <div class="form__input form__select">
+                                            <select class="select-item" name="people" id="">
+                                                <option value="people">People</option>
+                                                <option value="2">≤ 2</option>
+                                                <option value="5">≤ 5</option>
+                                                <option value="10">> 5</option>
+                                            </select>
+                                        </div>
+                                        <div class="form__input">
+                                            <input placeholder="Time" type="text" class="input-item">
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="form__button button button_color">BOOK NOW</button>
+                            </form>
                         </div>
                     </div>
                     <div class="content__images">
@@ -161,10 +197,12 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            </div>
+                <div class="booking__info">Mon - Fri: <span> 8PM - 10PM,</span> Sat - Sun: <span>8PM - 3AM,</span> Phone: <span> +40 729 131 637/+40 726 458 782</span>
+                </div>
             </section>
-
         </main>
     <script src="js/main.js"></script>
-
     </body>
 </html>

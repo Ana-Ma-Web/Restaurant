@@ -235,12 +235,12 @@ hr {
   font-family: var(--body-font);
   text-transform: uppercase;
   font-weight: var(--font-bold);
-  color: white;
+  color: var(--text-color-light);
 }
 
 .home {
   position: relative;
-  color: white;
+  color: var(--text-color-light);
   overflow: hidden;
 }
 
@@ -429,6 +429,10 @@ hr {
   stroke: var(--first-color);
 }
 
+.content__form .button {
+  width: 100%;
+}
+
 .reverse {
   width: 100%;
   position: relative;
@@ -443,7 +447,7 @@ hr {
   left: -webkit-calc(50% - 3.175rem);
   left: calc(50% - 3.175rem);
   text-transform: uppercase;
-  color: white;
+  color: var(--text-color-light);
 }
 
 .reverse .home__img-bg {
@@ -456,7 +460,7 @@ hr {
   -webkit-flex-direction: row-reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
-  color: white;
+  color: var(--text-color-light);
 }
 
 .reverse .content__img-square {
@@ -466,4 +470,79 @@ hr {
 .reverse img {
   margin-left: auto;
   margin-left: auto;
+}
+
+.form__title {
+  margin-bottom: .7rem;
+}
+
+.form__columns {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.form__column {
+  margin: 0 5px 0 0;
+}
+
+.form__column:last-child {
+  margin: 0 0 0 5px;
+}
+
+.form__input, .form__select {
+  margin-bottom: 10px;
+}
+
+input, select {
+  padding: 1.25rem;
+}
+
+input::-webkit-input-placeholder, select::-webkit-input-placeholder {
+  color: var(--input-color-text);
+}
+
+input:-ms-input-placeholder, select:-ms-input-placeholder {
+  color: var(--input-color-text);
+}
+
+input::-ms-input-placeholder, select::-ms-input-placeholder {
+  color: var(--input-color-text);
+}
+
+input::placeholder, select::placeholder {
+  color: var(--input-color-text);
+}
+
+.input-item,
+.select-item {
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  font-family: var(--body-font);
+  height: 3.75rem;
+  width: 17.3125rem;
+  background-color: var(--input-color-bg);
+  color: var(--input-color-text);
+}
+
+.booking {
+  position: relative;
+}
+
+.booking__info {
+  color: var(--text-color);
+  opacity: .5;
+  position: absolute;
+  bottom: 5%;
+  width: 100%;
+  text-align: center;
+}
+
+.booking__info span {
+  font-weight: var(--font-bold);
 }
