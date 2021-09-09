@@ -541,6 +541,7 @@ input::placeholder, select::placeholder {
   bottom: 5%;
   width: 100%;
   text-align: center;
+  text-align: center;
 }
 
 .booking__info span {
