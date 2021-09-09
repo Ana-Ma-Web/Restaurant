@@ -495,7 +495,8 @@ hr {
   margin: 0 0 0 5px;
 }
 
-.form__input, .form__select {
+.form__input,
+.select {
   margin-bottom: 10px;
 }
 
@@ -520,14 +521,22 @@ input::placeholder, select::placeholder {
 }
 
 .input-item,
-.select-item {
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+.select,
+.select__item {
+  -webkit-border-radius: 0.3125rem;
+          border-radius: 0.3125rem;
   font-family: var(--body-font);
   height: 3.75rem;
   width: 17.3125rem;
   background-color: var(--input-color-bg);
   color: var(--input-color-text);
+}
+
+.select__item {
+  width: 16.3rem;
+  background-color: transparent;
+  margin-right: .7rem;
+  margin-left: -0.8rem;
 }
 
 .booking {
@@ -540,7 +549,6 @@ input::placeholder, select::placeholder {
   position: absolute;
   bottom: 5%;
   width: 100%;
-  text-align: center;
   text-align: center;
 }
 

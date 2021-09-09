@@ -399,8 +399,12 @@ hr {
 
    &__input,
    &__select {
-      margin-bottom: 10px;
    }
+}
+
+.form__input,
+.select {
+   margin-bottom: 10px;
 }
 
 input, select {
@@ -411,13 +415,23 @@ input, select {
 }
 
 .input-item,
-.select-item {
-   border-radius: 5px;
+.select,
+.select__item{
+   border-radius: 0.3125rem;
    font-family: var(--body-font);
    height: 3.75rem;
    width: 17.3125rem;
    background-color: var(--input-color-bg);
    color: var(--input-color-text);
+}
+
+.select {
+   &__item {
+      width: 16.3rem;
+      background-color: transparent;
+      margin-right: .7rem;
+      margin-left: -0.8rem;
+      }
 }
 
 .booking {
@@ -431,7 +445,6 @@ input, select {
       position: absolute;
       bottom: 5%;
       width: 100%;
-      text-align: center;
       text-align: center;
    }
 }
