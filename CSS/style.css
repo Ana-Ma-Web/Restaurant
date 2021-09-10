@@ -555,3 +555,69 @@ input::placeholder, select::placeholder {
 .booking__info span {
   font-weight: var(--font-bold);
 }
+
+.menu {
+  text-align: center;
+}
+
+.menu__title {
+  max-width: 34.375rem;
+  margin: 5% auto 0;
+}
+
+.menu__subtitle {
+  font-weight: var(--font-bold);
+}
+
+.table__tabs {
+  position: relative;
+  width: 52.5rem;
+  margin: 3% auto 0;
+}
+
+.table__tabs label {
+  cursor: pointer;
+  display: block;
+  float: left;
+  position: relative;
+  width: 7.5rem;
+  height: 3.125rem;
+  text-align: center;
+  font-size: var(--small-font-size);
+  font-family: var(--body-font);
+  text-transform: uppercase;
+  font-weight: var(--font-bold);
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.table__content {
+  position: relative;
+  z-index: 2;
+  height: 27rem;
+}
+
+.table__content > div {
+  position: absolute;
+  left: -100%;
+  opacity: 0;
+  -webkit-transition: opacity .5s ease-in-out;
+  -o-transition: opacity .5s ease-in-out;
+  transition: opacity .5s ease-in-out;
+}
+
+.table__tabs input {
+  position: absolute;
+  left: -9999px;
+}
+
+#tab-1:checked ~ .table__content #content-1,
+#tab-2:checked ~ .table__content #content-2,
+#tab-3:checked ~ .table__content #content-3,
+#tab-4:checked ~ .table__content #content-4,
+#tab-5:checked ~ .table__content #content-5,
+#tab-6:checked ~ .table__content #content-6,
+#tab-7:checked ~ .table__content #content-7 {
+  position: static;
+  left: 0;
+  opacity: 1;
+}
