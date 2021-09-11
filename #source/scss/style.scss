@@ -143,12 +143,6 @@ hr {
       align-items: center;
    }
 
-   &__item {
-   }
-
-   &__link {
-   }
-
    &__logo {
       height: 150px;
       width: 150px;
@@ -199,9 +193,6 @@ hr {
             transform: rotate(-90deg);
    }
 
-         &_days {
-
-         }
          &_hours{
             margin-left: 4.4375rem;
          }
@@ -297,10 +288,6 @@ hr {
    }
 }
 
-.about {
-}
-.container {
-}
 .content {
    display: flex;
    justify-content: space-between;
@@ -313,34 +300,32 @@ hr {
          padding: 0 20px;
 		}
 
-		&__h2 {
-		}
 
 		&__title {
          font-weight: var(--font-bold);
          // padding: 0 0rem 0 1.25rem;
 		}
 
-		&__text {
-		}
 
 		&__images {
          position: relative;
          width: 600px;
+
 		}
 
 		&__img {
-		}
-
-		&__img-square {
-         svg {
-            stroke: var(--first-color);
+         
+         &-square {
+            svg {
+               stroke: var(--first-color);
+            }
+            position: absolute;
+            top: 25%;
+            right: 0;
+            z-index: var(--z-tooltip);
          }
-         position: absolute;
-         top: 25%;
-         right: 0;
-         z-index: var(--z-tooltip);
-		}
+      }
+
 
       &__form {
          & .button{
@@ -352,17 +337,21 @@ hr {
 .reverse {
    width: 100%;
    position: relative;
+   & .section-title {
+      width: 6.25rem;
+      left: calc(50% - 3.175rem);
+
+   }
 }
-.reverse span {
+
+.section-title {
    display: block;
    position: absolute;
    height: 1rem;
-   width: 6.25rem;
-   top: 2rem;
-   left: calc(50% - 3.175rem);
+   top: 2.5rem;
    text-transform: uppercase;
    color: var(--text-color-light);
-   }
+}
 .reverse .home__img-bg{
    width: 100%;
 }
@@ -375,7 +364,6 @@ hr {
    left: 0;
 }
 .reverse img {
-   margin-left: auto;
    margin-left: auto;
 }
 
@@ -398,9 +386,7 @@ hr {
       }
    }
 
-   &__input,
-   &__select {
-   }
+
 }
 
 .form__input,
@@ -437,18 +423,20 @@ input, select {
 
 .booking {
    position: relative;
-   &__info {
-      color: var(--text-color);
-      opacity: .5;
-      & span {
-         font-weight: var(--font-bold);
-      }
-      position: absolute;
-      bottom: 5%;
-      width: 100%;
-      text-align: center;
-   }
 }
+.booking__info,
+.events__info {
+   color: var(--text-color);
+   opacity: .5;
+   & span {
+      font-weight: var(--font-bold);
+   }
+   position: absolute;
+   bottom: 5%;
+   width: 100%;
+   text-align: center;
+}
+
 
 //==============MENU================
 .menu {
@@ -509,7 +497,7 @@ input, select {
 
    &__container{
       // position: relative;
-      min-height: 26.5625rem;
+      min-height: 32.8125rem;
    }
 
    &__content {
@@ -541,9 +529,6 @@ tr {
       font-size: var(--smallest-font-size);
       height: 3rem;
       vertical-align: top;
-
-      // margin-bottom: 2rem;
-      // margin-top: 20px;
    }
    & .price {
       padding-left: .9rem;
@@ -560,20 +545,77 @@ td{
    white-space: nowrap;
    max-width: 13.25rem;
    text-overflow: ellipsis;
-   &:nth-child(even){
-      &:not(:first-child){
-         // margin-left: 3rem;
-         // padding-right: 3rem;
-      }
+}
+
+.events {
+   position: relative;
+
+   & .section-title {
+      left: calc(50% - 4.175rem);
    }
-   &:not(:first-child){
-      // margin-left: 3rem;
-      // padding-right: 3rem;
+   
+   & span{
+      text-transform: uppercase;
+      color: var(--text-color-light);
+   }
+
+
+   &__info {
+      color: var(--text-color-light);
+      opacity: .5;
+      width: 100%;
    }
 }
 
-// .price {
-//    vertical-align: top;
-//    padding: 0 3rem 0 .9rem;
-// }
+
+.content{
+   text-align: left;
+   &__img{
+      position: relative;
+      &-cover{
+         position: absolute;
+         background-color: black;
+         top: 0;
+         // left: 0;
+         width: 5rem;
+         height: 100%;
+         color: var(--text-color-light);
+         font-size: 1.5rem;
+         text-transform: uppercase;
+         font-weight: var(--font-bold);
+         & div {
+            position: absolute;
+            bottom: -2rem;
+            left: 0;
+            transform-origin: top left;
+            transform: rotate(-90deg);
+            min-width: 25rem;
+            padding: 1.5rem 0 0 0;
+         }
+      }
+   }
+
+   &__images_left{
+      & img {
+         margin-left: auto;
+      }
+      & .content__img-cover{
+         right: 0;
+         & div{
+            top: 0;
+            margin-left: 5.2rem;
+            margin-top: 1.5rem;
+            transform-origin: top left;
+            transform: rotate(90deg);
+         }
+      }
+      & .content__img-square{
+         left: 0;
+      }
+   }
+}
+
+
+
+
 

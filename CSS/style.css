@@ -439,14 +439,17 @@ hr {
   position: relative;
 }
 
-.reverse span {
+.reverse .section-title {
+  width: 6.25rem;
+  left: -webkit-calc(50% - 3.175rem);
+  left: calc(50% - 3.175rem);
+}
+
+.section-title {
   display: block;
   position: absolute;
   height: 1rem;
-  width: 6.25rem;
-  top: 2rem;
-  left: -webkit-calc(50% - 3.175rem);
-  left: calc(50% - 3.175rem);
+  top: 2.5rem;
   text-transform: uppercase;
   color: var(--text-color-light);
 }
@@ -469,7 +472,6 @@ hr {
 }
 
 .reverse img {
-  margin-left: auto;
   margin-left: auto;
 }
 
@@ -544,7 +546,8 @@ input::placeholder, select::placeholder {
   position: relative;
 }
 
-.booking__info {
+.booking__info,
+.events__info {
   color: var(--text-color);
   opacity: .5;
   position: absolute;
@@ -553,7 +556,8 @@ input::placeholder, select::placeholder {
   text-align: center;
 }
 
-.booking__info span {
+.booking__info span,
+.events__info span {
   font-weight: var(--font-bold);
 }
 
@@ -614,7 +618,7 @@ input::placeholder, select::placeholder {
 }
 
 .table__container {
-  min-height: 26.5625rem;
+  min-height: 32.8125rem;
 }
 
 .table__content {
@@ -660,4 +664,82 @@ td {
   max-width: 13.25rem;
   -o-text-overflow: ellipsis;
      text-overflow: ellipsis;
+}
+
+.events {
+  position: relative;
+}
+
+.events .section-title {
+  left: -webkit-calc(50% - 4.175rem);
+  left: calc(50% - 4.175rem);
+}
+
+.events span {
+  text-transform: uppercase;
+  color: var(--text-color-light);
+}
+
+.events__info {
+  color: var(--text-color-light);
+  opacity: .5;
+  width: 100%;
+}
+
+.content {
+  text-align: left;
+}
+
+.content__img {
+  position: relative;
+}
+
+.content__img-cover {
+  position: absolute;
+  background-color: black;
+  top: 0;
+  width: 5rem;
+  height: 100%;
+  color: var(--text-color-light);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: var(--font-bold);
+}
+
+.content__img-cover div {
+  position: absolute;
+  bottom: -2rem;
+  left: 0;
+  -webkit-transform-origin: top left;
+      -ms-transform-origin: top left;
+          transform-origin: top left;
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  min-width: 25rem;
+  padding: 1.5rem 0 0 0;
+}
+
+.content__images_left img {
+  margin-left: auto;
+}
+
+.content__images_left .content__img-cover {
+  right: 0;
+}
+
+.content__images_left .content__img-cover div {
+  top: 0;
+  margin-left: 5.2rem;
+  margin-top: 1.5rem;
+  -webkit-transform-origin: top left;
+      -ms-transform-origin: top left;
+          transform-origin: top left;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.content__images_left .content__img-square {
+  left: 0;
 }
