@@ -38,13 +38,14 @@
    --z-fixed: 100;
 
       // ========== Font ===========
-   --body-font: 'Open Sans', sans-serif;
-   --title-font: 'Yeseva One', cursive;
-   --h1-font-size: 70px; //70px 4.375
-   --h2-font-size: 1.625rem; //26px
-   --large-font-size: 1.125rem; //18px
-   --normal-font-size: .875rem; //14px
-   --small-font-size: .75rem; //12px
+      --body-font: 'Open Sans', sans-serif;
+      --title-font: 'Yeseva One', cursive;
+      --h1-font-size: 70px; //70px 4.375
+      --h2-font-size: 1.625rem; //26px
+      --large-font-size: 1.125rem; //18px
+      --normal-font-size: .875rem; //14px
+      --small-font-size: .75rem; //12px
+      --smallest-font-size: 0.5625rem; //9px0:38 11.09.2021
 
       // ========== Font weight ===========
    --font-bold: 700;
@@ -449,72 +450,130 @@ input, select {
    }
 }
 
+//==============MENU================
 .menu {
    text-align: center;
 
+
+   &__container {
+      padding: 100px 0;
+   }
    &__title {
       max-width: 34.375rem;
-      margin: 5% auto 0;
+      margin: 0 auto ;
    }
 
    &__subtitle {
+      margin-top: .5rem;
       font-weight: var(--font-bold);
    }
 }
 
+//=====================TABS=================
 .table {
+   // margin: 0 auto;
+   // text-align: center;
 
    &__tabs {
-      position: relative;
-      width: 52.5rem;
-      margin: 3% auto 0;
-      
+      // position: relative;
+      display: flex;
+      justify-content: space-between;
+      max-width: 52.5rem;
+      height: 3.125rem;
+      width: 100%;
+      margin: 3rem auto;
+      // align-items: center;
+      &-item{
+         cursor: pointer;
+         // display: block;
+         float: left;
+         // position: relative;
+         height: 100%;
+         width: 7.5rem;
+         font-size: var(--small-font-size);
+         font-family: var(--body-font);
+         text-transform: uppercase;
+         font-weight: var(--font-bold);
+         &:not(:first-child){
+            border-left: 1px solid hsla(0, 0%, 0%, .2);
+         }
+      }
+      &-link{
+         padding-top: 1rem;
+         color: var(--text-color);
+         display: inline-block;
+         height: 100%;
+         width: 100%;
+      }
    }
 
-   &__tabs label{
-      cursor: pointer;
-      display: block;
-      float: left;
-      position: relative;
-      width: 7.5rem;
-      height: 3.125rem;
-      text-align: center;
-      font-size: var(--small-font-size);
-      font-family: var(--body-font);
-      text-transform: uppercase;
-      font-weight: var(--font-bold);
-      border-left: 1px solid hsla(0, 0%, 0%, .2);
-}
+   &__container{
+      // position: relative;
+      min-height: 26.5625rem;
+   }
 
    &__content {
-      position: relative;
-      z-index: 2;
-      height: 27rem;
-   }
-
-   &__content > div {
       position: absolute;
       left: -100%;
       opacity: 0;
-      transition: opacity .5s ease-in-out;
-   }
-
-   &__tabs input {
-      position: absolute;
-      left: -9999px;
    }
 }
 
-#tab-1:checked ~ .table__content #content-1,
-#tab-2:checked ~ .table__content #content-2,
-#tab-3:checked ~ .table__content #content-3,
-#tab-4:checked ~ .table__content #content-4,
-#tab-5:checked ~ .table__content #content-5,
-#tab-6:checked ~ .table__content #content-6,
-#tab-7:checked ~ .table__content #content-7 {
+.table__tabs-link_active {
+}
+
+.table__content_active {
    position: static;
-	left: 0;
-	opacity: 1;
+   opacity: 1;
 }
 
+//=================TABLE============
+table {
+   width: 80rem;   
+   text-align: left;
+}
+
+tr {
+   font-family: var(--title-font);
+   font-size: var(--normal-font-size);
+   &:nth-child(even){
+      color: var(--input-color-text);
+      font-size: var(--smallest-font-size);
+      height: 3rem;
+      vertical-align: top;
+
+      // margin-bottom: 2rem;
+      // margin-top: 20px;
+   }
+   & .price {
+      padding-left: .9rem;
+      vertical-align: top;
+
+      &:not(:last-child){
+         padding-right: 3rem;
+         }
+      }
+}
+
+td{
+   overflow: hidden;
+   white-space: nowrap;
+   max-width: 13.25rem;
+   text-overflow: ellipsis;
+   &:nth-child(even){
+      &:not(:first-child){
+         // margin-left: 3rem;
+         // padding-right: 3rem;
+      }
+   }
+   &:not(:first-child){
+      // margin-left: 3rem;
+      // padding-right: 3rem;
+   }
+}
+
+// .price {
+//    vertical-align: top;
+//    padding: 0 3rem 0 .9rem;
+// }
 
