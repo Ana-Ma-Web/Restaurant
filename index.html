@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="ru">
 	<head>
-        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
         <title>RESTAURANT</title>
+        <link rel="stylesheet" href="CSS/swiper-bundle.min.css">
+        <link rel="stylesheet" href="CSS/pagination.min.css">
         <link rel="stylesheet" href="CSS/style.css">
         <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
 	</head>
@@ -32,10 +33,10 @@
                             <a href="#menu" class="nav__link">menu</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#galerie" class="nav__link">galerie</a>
+                            <a href="#events" class="nav__link">events</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#events" class="nav__link">events</a>
+                            <a href="#galerie" class="nav__link">galerie</a>
                         </li>
                         <li class="nav__item">
                             <a href="#contact" class="nav__link">contact</a>
@@ -129,7 +130,6 @@
                         <br>
                         <div class="content__text">Integer ullamcorper neque eu purus euismod, ac faucibus mauris posuere. Morbi non ultrices ligula. Sed dictum, enim sed ullamcorper feugiat, dui odio vehicula eros, a sollicitudin lorem quam nec sem. Mauris tincidunt feugiat diam convallis pharetra. Nulla facilisis semper laoreet.
                         </div>
-
                     </div>
                     <div class="content__images">
                         <div class="content__img">
@@ -217,26 +217,79 @@
                         <img src="img/bg/home-1920x12801.jpg" alt="home">
                     </picture>
                 </div>
-                <div class="content container">
-                    <div class="content__info">
-                        <h2 class="content__h2">chocolate pancakes</h2>
-                        <div class="line"><hr>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="content container">
+                                <div class="content__info">
+                                    <h2 class="content__h2">fruit capcakes</h2>
+                                    <div class="line"><hr>
+                                    </div>
+                                    <div class="content__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.</div>
+                                    <br>
+                                    <div class="content__text">Integer ullamcorper neque eu purus euismod, ac faucibus mauris posuere. Morbi non ultrices ligula. Sed dictum, enim sed ullamcorper feugiat, dui odio vehicula eros, a sollicitudin lorem quam nec sem. Mauris tincidunt feugiat diam convallis pharetra. Nulla facilisis semper laoreet.
+                                    </div>
+                                </div>
+                                <div class="content__images">
+                                    <div class="content__img">
+                                        <img src="img/capcakes-475x475.jpg" alt="">
+                                    </div>
+                                    <div class="content__img-square">
+                                        <svg width="250" height="250" version="1.1">
+                                            <rect x="10" y="10" width="230" height="230" fill="transparent" stroke-width="20"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="content__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.</div>
-                        <br>
-                        <div class="content__text">Integer ullamcorper neque eu purus euismod, ac faucibus mauris posuere. Morbi non ultrices ligula. Sed dictum, enim sed ullamcorper feugiat, dui odio vehicula eros, a sollicitudin lorem quam nec sem. Mauris tincidunt feugiat diam convallis pharetra. Nulla facilisis semper laoreet.
+                        <div class="swiper-slide">
+                            <div class="content container">
+                                <div class="content__info">
+                                    <h2 class="content__h2">chocolate pancakes</h2>
+                                    <div class="line"><hr>
+                                    </div>
+                                    <div class="content__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.</div>
+                                    <br>
+                                    <div class="content__text">Integer ullamcorper neque eu purus euismod, ac faucibus mauris posuere. Morbi non ultrices ligula. Sed dictum, enim sed ullamcorper feugiat, dui odio vehicula eros, a sollicitudin lorem quam nec sem. Mauris tincidunt feugiat diam convallis pharetra. Nulla facilisis semper laoreet.
+                                    </div>
+                                </div>
+                                <div class="content__images">
+                                    <div class="content__img">
+                                        <img src="img/pancakes-475x475.jpg" alt="">
+                                    </div>
+                                    <div class="content__img-square">
+                                        <svg width="250" height="250" version="1.1">
+                                            <rect x="10" y="10" width="230" height="230" fill="transparent" stroke-width="20"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="content container">
+                                <div class="content__info">
+                                    <h2 class="content__h2">best drinks</h2>
+                                    <div class="line"><hr>
+                                    </div>
+                                    <div class="content__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.</div>
+                                    <br>
+                                    <div class="content__text">Integer ullamcorper neque eu purus euismod, ac faucibus mauris posuere. Morbi non ultrices ligula. Sed dictum, enim sed ullamcorper feugiat, dui odio vehicula eros, a sollicitudin lorem quam nec sem. Mauris tincidunt feugiat diam convallis pharetra. Nulla facilisis semper laoreet.
+                                    </div>
+                                </div>
+                                <div class="content__images">
+                                    <div class="content__img">
+                                        <img src="img/tea-475x475.jpg" alt="">
+                                    </div>
+                                    <div class="content__img-square">
+                                        <svg width="250" height="250" version="1.1">
+                                            <rect x="10" y="10" width="230" height="230" fill="transparent" stroke-width="20"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="content__images">
-                        <div class="content__img">
-                            <img src="img/pancakes-475x475.jpg" alt="">
-                        </div>
-                        <div class="content__img-square">
-                            <svg width="250" height="250" version="1.1">
-                                <rect x="10" y="10" width="230" height="230" fill="transparent" stroke-width="20"/>
-                            </svg>
-                        </div>
-                    </div>
+                    <div class="swiper-pagination"></div>
                 </div>
             </section>
             <section class="menu">
@@ -924,9 +977,11 @@
                         </div>
                     </div>
                 </div>
-                    <div class="events__info">For private events please call: <span>+40 729 131 637/+40 726 458 782</span> or use the contact form.</div>
+                <div class="events__info">For private events please call: <span>+40 729 131 637/+40 726 458 782</span> or use the contact form.</div>
             </section>
         </main>
-    <script src="js/main.js"></script>
+        <script  src="js/pagination.js"></script>
+        <script  src="js/swiper-bundle.min.js"></script>
+        <script src="js/main.js"></script>
     </body>
 </html>

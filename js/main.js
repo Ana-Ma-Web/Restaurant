@@ -18,3 +18,14 @@ document.querySelectorAll('.table__tabs-link').forEach((item) =>
 );
 
 document.querySelector('.table__tabs-link').click();
+
+// Swiper
+
+const swiper = new Swiper('.swiper', {
+   loop: true,
+
+   pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+   },
+});
