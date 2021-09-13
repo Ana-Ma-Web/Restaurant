@@ -267,6 +267,7 @@ hr {
 
 // ========== HOME IMG BG ===========
 .img-bg {
+   background-color: #101010;
    position: absolute;
    top: 0;
    left: 0;
@@ -301,7 +302,6 @@ hr {
 		}
 
 		&__img {
-         
          &-square {
             svg {
                stroke: var(--first-color);
@@ -604,10 +604,115 @@ td{
 }
 
 // ================== SWIPER =============== 
-.swiper {
-   // width: 600px;
-   // height: 300px;
+
+.gallery .swiper-slide {
+   max-height: 360px;
+   max-width: 360px;
 }
 
+//============== CONTACT ==================
 
+.contact {
+   margin: 0 auto;
+   text-align: center;
+
+		&__container {
+         padding: 100px 0;
+
+		}
+
+   &__h2 {
+   }
+
+   &__title {
+      font-weight: var(--font-bold);
+      font-size: var(--large-font-size);
+      max-width: 34.69rem;
+      margin: 1rem auto 2rem;
+   }
+
+   &__form {
+   }
+
+   & .form__input,
+   .input-item {
+      width: 100%;
+   }
+   & .form__input{
+      &:not(:last-child){
+         margin-right: 0.625rem;
+      }
+   }
+   &__button{
+      width: 50%;
+   }
+   &__icon{
+      width: 33%;
+   }
+}
+
+.form {
+
+   &__list {
+      display: flex;
+      justify-content: space-between;
+   }
+
+   &__message{
+      min-height: 7.5rem;
+      min-width: 100%;
+      max-width: 100%;
+      max-height: 12.5rem;
+      padding: 1.25rem;
+      &::placeholder{
+         color: var(--input-color-text);
+      }
+   }
+
+   &__contacts {
+      display: flex;
+      justify-content: space-between;
+   }
+
+   &__links {
+      display: flex;
+      justify-content: space-between;
+      font-size: var(--small-font-size);
+      color: var(--input-color-text);
+      width: 50%;
+      padding-right: .5rem;
+   }
+   &__link {
+      background-repeat: no-repeat;
+      align-self: center;
+      text-align: left;
+      padding-left: 2rem;
+      &:nth-child(1){
+         background-image: url(../img/icons/map-pin-2-fill.svg);
+         }
+      &:nth-child(2){
+         background-image: url(../img/icons/phone-fill.svg);
+         }
+      &:nth-child(3){
+         background-image: url(../img/icons/mail-fill.svg);
+         }
+      }
+}
+
+.footer{
+   background-color: #1A1A1A;
+   width: 100%;
+   height: 100px;
+   color: var(--border-color);
+   font-size: var(--small-font-size);
+   display: flex;
+   text-align: center;
+   align-items: center;
+   &__text {
+      width: 100%;
+      & span {
+         font-weight: var(--font-bold);
+      }
+   }
+}
 

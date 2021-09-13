@@ -20,8 +20,11 @@ document.querySelectorAll('.table__tabs-link').forEach((item) =>
 document.querySelector('.table__tabs-link').click();
 
 // Swiper
+const slider = document.querySelector('.swiper');
+const sliderGallery = document.querySelector('.swiper-gallery');
 
-const swiper = new Swiper('.swiper', {
+
+let Swiper1 = new Swiper(slider, {
    loop: true,
 
    pagination: {
@@ -29,3 +32,11 @@ const swiper = new Swiper('.swiper', {
       clickable: true,
    },
 });
+
+let Swiper2 = new Swiper(sliderGallery, {
+   slidesPerView: 4,
+   loopedSlides: 5,
+   loop: false,
+   spaceBetween: 0,
+});
+
