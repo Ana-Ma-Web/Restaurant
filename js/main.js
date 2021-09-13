@@ -1,4 +1,4 @@
-// Table tabs
+// ==============  Table tabs ===========
 document.querySelectorAll('.table__tabs-link').forEach((item) =>
    item.addEventListener('click', function (e) {
       e.preventDefault();
@@ -19,7 +19,7 @@ document.querySelectorAll('.table__tabs-link').forEach((item) =>
 
 document.querySelector('.table__tabs-link').click();
 
-// Swiper
+// ============ Swiper ==============
 const slider = document.querySelector('.swiper');
 const sliderGallery = document.querySelector('.swiper-gallery');
 
@@ -40,3 +40,19 @@ let Swiper2 = new Swiper(sliderGallery, {
    spaceBetween: 0,
 });
 
+
+// ============ HEADER BG ==============
+function scrollHeader() {
+   const header = document.getElementById('header')
+   if (this.scrollY >= 50) header.classList.add ('scroll-header'); else header.classList.remove ('scroll-header')
+}
+window.addEventListener('scroll', scrollHeader)
+
+// ============ SCROLLUP =============
+function scrollUp() {
+   const scrollUp = document.getElementById ('scroll-up')
+   if (this.scrollY >= 300) scrollUp.classList.add ('show-scroll'); 
+   else scrollUp.classList.remove ('show-scroll')
+}
+
+window.addEventListener('scroll', scrollUp)

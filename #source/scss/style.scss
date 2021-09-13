@@ -89,6 +89,7 @@ hr {
 
 // =========== BUTTONS ===========
 .button {
+   display: inline-block;
    height: 3.75rem; //60px
    width: 12.5rem; //200px
    border-radius: 5px;
@@ -123,6 +124,7 @@ hr {
    height: var(--header-height);
 }
 
+
 .nav {
    height: 100%;
 
@@ -154,6 +156,14 @@ hr {
 
 .active-link {
 }
+
+.scroll-header {
+   background-color: var(--first-color);
+   & .nav__logo {
+      display: none;
+   }
+}
+
 
       // ========== HOME SECTION ===========
       .home {
@@ -446,6 +456,7 @@ input, select {
 .swiper-pagination-horizontal.swiper-pagination-bullets
 .swiper-pagination-bullet{
 margin: 0 10px;
+opacity: 1;
 }
 .swiper-pagination-bullet{
    height: 10px;
@@ -716,3 +727,18 @@ td{
    }
 }
 
+.scrollup {
+   display: block;
+   background-image: url(../img/icons/up-btn.svg);
+   position: fixed;
+   right: 5%;
+   bottom: -50%;
+   width: 3.75rem;
+   height: 3.75rem;
+   z-index: var(--z-fixed);
+   transition-duration: .5s;
+}
+
+.show-scroll{
+   bottom: 5%;
+}

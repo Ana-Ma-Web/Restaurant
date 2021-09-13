@@ -167,6 +167,7 @@ hr {
 }
 
 .button {
+  display: inline-block;
   height: 3.75rem;
   width: 12.5rem;
   -webkit-border-radius: 5px;
@@ -237,6 +238,14 @@ hr {
   text-transform: uppercase;
   font-weight: var(--font-bold);
   color: var(--text-color-light);
+}
+
+.scroll-header {
+  background-color: var(--first-color);
+}
+
+.scroll-header .nav__logo {
+  display: none;
 }
 
 .home {
@@ -587,6 +596,7 @@ input::placeholder, select::placeholder {
 .swiper-pagination-horizontal.swiper-pagination-bullets
 .swiper-pagination-bullet {
   margin: 0 10px;
+  opacity: 1;
 }
 
 .swiper-pagination-bullet {
@@ -903,4 +913,22 @@ td {
 
 .footer__text span {
   font-weight: var(--font-bold);
+}
+
+.scrollup {
+  display: block;
+  background-image: url(../img/icons/up-btn.svg);
+  position: fixed;
+  right: 5%;
+  bottom: -50%;
+  width: 3.75rem;
+  height: 3.75rem;
+  z-index: var(--z-fixed);
+  -webkit-transition-duration: .5s;
+       -o-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.show-scroll {
+  bottom: 5%;
 }
