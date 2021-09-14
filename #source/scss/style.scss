@@ -87,6 +87,14 @@ hr {
    border-radius: 2.5px;
 }
 
+//============ THEME =============
+body.dark-theme{
+   --body-color: #666666;
+   --text-color: white;
+   --title-color: white;
+
+}
+
 // =========== BUTTONS ===========
 .button {
    display: inline-block;
@@ -147,12 +155,17 @@ hr {
       align-items: center;
    }
 
+   &__item{
+      min-width: 6rem;
+   }
+
    &__logo {
       height: 150px;
       width: 150px;
       background-image: url(../img/logo.svg);
       margin-top: 50%;
    }
+
 
    &__link{
       &:hover{
@@ -178,6 +191,10 @@ hr {
    &:hover{
       border-color: var(--text-color);
    }
+}
+
+.theme-button_light{
+   background-image: url(../img/icons/sun-white.svg);
 }
 
 
@@ -815,7 +832,7 @@ td{
       display: none;
    }
    & .theme-button{
-      display: block;
+      display: inline-block;
    }
 }
 
@@ -840,3 +857,4 @@ td{
 .show-scroll{
    bottom: 5%;
 }
+

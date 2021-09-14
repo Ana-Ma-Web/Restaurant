@@ -166,6 +166,12 @@ hr {
           border-radius: 2.5px;
 }
 
+body.dark-theme {
+  --body-color: #666666;
+  --text-color: white;
+  --title-color: white;
+}
+
 .button {
   display: inline-block;
   height: 3.75rem;
@@ -234,6 +240,10 @@ hr {
           align-items: center;
 }
 
+.nav__item {
+  min-width: 6rem;
+}
+
 .nav__logo {
   height: 150px;
   width: 150px;
@@ -264,6 +274,10 @@ hr {
 
 .theme-button:hover {
   border-color: var(--text-color);
+}
+
+.theme-button_light {
+  background-image: url(../img/icons/sun-white.svg);
 }
 
 .nav__link, .button {
@@ -997,7 +1011,7 @@ td {
 }
 
 .scroll-header .theme-button {
-  display: block;
+  display: inline-block;
 }
 
 .scrollup {
