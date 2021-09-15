@@ -30,7 +30,7 @@
    --border-color: hsla(0, 0%, 100%, .5);
    --bg-fill-color: hsla(0, 0%, 0%, .6);
    --footer-color: hsla(0, 0%, 0%, .9);
-
+   --header-text-color: hsl(0, 0%, 0%);
       // ========== Z-index ==========
    --z-bg: -1;
    --z-tooltip: 10;
@@ -89,11 +89,17 @@ hr {
 
 //============ THEME =============
 body.dark-theme{
-   --body-color: #666666;
-   --text-color: white;
-   --title-color: white;
-
+   --first-color: hsl(var(--hue-color), 100%, 40%);
+   --body-color: rgb(19, 18, 17);
+   --text-color: rgb(204, 204, 204);
+   --title-color: rgb(204, 204, 204);
+   --input-color-text: grey;
+   .table__tabs-item{
+      border-color:grey;
+   }
 }
+
+
 
 // =========== BUTTONS ===========
 .button {
@@ -171,17 +177,16 @@ body.dark-theme{
       &:hover{
          color: var(--first-color);
       }
-      }
+   }
 
    &__change-theme {
       text-align: center;
    }
 }
 
-.theme-button {
+.change-theme {
    width: 60px;
    height: 60px;
-   background-image: url(../img/icons/moon-white.svg);
    background-position: center;
    background-repeat: no-repeat;
    background-color: transparent;
@@ -189,9 +194,14 @@ body.dark-theme{
    border: 1px solid var(--text-color-light);
    display: none;
    &:hover{
-      border-color: var(--text-color);
+      border-color: var(--header-text-color);
    }
 }
+
+.theme-button_dark{
+   background-image: url(../img/icons/moon-white.svg);
+}
+
 
 .theme-button_light{
    background-image: url(../img/icons/sun-white.svg);
@@ -342,9 +352,6 @@ body.dark-theme{
 
 .home__arrow-link {
    background: url('../img/icons/down-btn.svg') center no-repeat;
-   // &:hover{
-   //    border-color: var(--first-color);
-   // }
 
 }
 
@@ -831,7 +838,7 @@ td{
    & .nav__logo {
       display: none;
    }
-   & .theme-button{
+   & .change-theme{
       display: inline-block;
    }
 }

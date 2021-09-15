@@ -105,6 +105,7 @@ body {
   --border-color: hsla(0, 0%, 100%, .5);
   --bg-fill-color: hsla(0, 0%, 0%, .6);
   --footer-color: hsla(0, 0%, 0%, .9);
+  --header-text-color: hsl(0, 0%, 0%);
   --z-bg: -1;
   --z-tooltip: 10;
   --z-fixed: 100;
@@ -167,9 +168,15 @@ hr {
 }
 
 body.dark-theme {
-  --body-color: #666666;
-  --text-color: white;
-  --title-color: white;
+  --first-color: hsl(var(--hue-color), 100%, 40%);
+  --body-color: rgb(19, 18, 17);
+  --text-color: rgb(204, 204, 204);
+  --title-color: rgb(204, 204, 204);
+  --input-color-text: grey;
+}
+
+body.dark-theme .table__tabs-item {
+  border-color: grey;
 }
 
 .button {
@@ -259,10 +266,9 @@ body.dark-theme {
   text-align: center;
 }
 
-.theme-button {
+.change-theme {
   width: 60px;
   height: 60px;
-  background-image: url(../img/icons/moon-white.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-color: transparent;
@@ -272,8 +278,12 @@ body.dark-theme {
   display: none;
 }
 
-.theme-button:hover {
-  border-color: var(--text-color);
+.change-theme:hover {
+  border-color: var(--header-text-color);
+}
+
+.theme-button_dark {
+  background-image: url(../img/icons/moon-white.svg);
 }
 
 .theme-button_light {
@@ -1010,7 +1020,7 @@ td {
   display: none;
 }
 
-.scroll-header .theme-button {
+.scroll-header .change-theme {
   display: inline-block;
 }
 
