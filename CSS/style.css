@@ -112,7 +112,7 @@ body {
   --body-font: 'Open Sans', sans-serif;
   --title-font: 'Yeseva One', cursive;
   --h1-font-size: 70px;
-  --h2-font-size: 1.625rem;
+  --h2-font-size: 2.3rem;
   --large-font-size: 1.125rem;
   --normal-font-size: .875rem;
   --small-font-size: .75rem;
@@ -225,6 +225,7 @@ body.dark-theme .table__tabs-item {
 
 .nav {
   height: 100%;
+  font-size: var(--small-font-size);
 }
 
 .nav__menu {
@@ -493,11 +494,19 @@ body.dark-theme .table__tabs-item {
   max-width: 640px;
   text-align: center;
   margin: auto 0;
-  padding: 0 20px;
+  padding: 0 3.2rem 0 .6rem;
 }
 
 .content__title {
+  margin-top: .6rem;
+  margin-bottom: 1.2rem;
   font-weight: var(--font-bold);
+  font-size: large;
+}
+
+.content__text {
+  font-size: var(--normal-font-size);
+  line-height: 1.5rem;
 }
 
 .content__images {
@@ -505,9 +514,13 @@ body.dark-theme .table__tabs-item {
   width: 600px;
 }
 
+.content__img img {
+  max-width: 80%;
+}
+
 .content__img-square {
   position: absolute;
-  top: 25%;
+  top: 24%;
   right: 0;
   z-index: var(--z-tooltip);
 }
@@ -518,6 +531,11 @@ body.dark-theme .table__tabs-item {
 
 .content__form .button {
   width: 100%;
+}
+
+.content__h2,
+.content .line {
+  padding-left: 3.3rem;
 }
 
 .reverse {
@@ -535,6 +553,8 @@ body.dark-theme .table__tabs-item {
   top: 7.5%;
   text-transform: uppercase;
   color: var(--text-color-light);
+  font-size: var(--small-font-size);
+  letter-spacing: .4rem;
 }
 
 .reverse .home__img-bg {
@@ -548,6 +568,19 @@ body.dark-theme .table__tabs-item {
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
   color: var(--text-color-light);
+}
+
+.reverse .content .line {
+  padding-left: 0;
+  padding-right: 3.3rem;
+}
+
+.reverse .content__info {
+  padding: 0 .6rem 0 3.2rem;
+}
+
+.reverse .content__images {
+  max-width: 588px;
 }
 
 .reverse .content__img-square {
@@ -741,6 +774,7 @@ input::placeholder, select::placeholder {
 
 .table__container {
   min-height: 32.8125rem;
+  overflow-x: auto;
 }
 
 .table__content {
@@ -1047,4 +1081,19 @@ td {
 
 .show-scroll {
   bottom: 5%;
+}
+
+@media screen and (min-width: 2500px) {
+  .home {
+    height: 100vh;
+  }
+  .home__container {
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  section {
+    padding: 0 12px;
+  }
 }

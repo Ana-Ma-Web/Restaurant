@@ -40,7 +40,7 @@
       --body-font: 'Open Sans', sans-serif;
       --title-font: 'Yeseva One', cursive;
       --h1-font-size: 70px; //70px 4.375
-      --h2-font-size: 1.625rem; //26px
+      --h2-font-size: 2.3rem; //26px
       --large-font-size: 1.125rem; //18px
       --normal-font-size: .875rem; //14px
       --small-font-size: .75rem; //12px
@@ -149,6 +149,7 @@ body.dark-theme{
 
 .nav {
    height: 100%;
+   font-size: var(--small-font-size);
 
    &__menu {
       height: 100%;
@@ -174,6 +175,7 @@ body.dark-theme{
 
 
    &__link{
+      
       &:hover{
          color: var(--first-color);
       }
@@ -379,12 +381,21 @@ body.dark-theme{
          max-width: 640px;
          text-align: center;
          margin: auto 0;
-         padding: 0 20px;
+         padding: 0 3.2rem 0 .6rem;
 		}
 
+
 		&__title {
+         margin-top: .6rem;
+         margin-bottom: 1.2rem;
          font-weight: var(--font-bold);
+         font-size: large;
 		}
+
+      &__text{
+         font-size: var(--normal-font-size);
+         line-height: 1.5rem;
+      }
 
 		&__images {
          position: relative;
@@ -392,12 +403,15 @@ body.dark-theme{
 		}
 
 		&__img {
+         & img {
+            max-width: 80%;
+         }
          &-square {
             svg {
                stroke: var(--first-color);
             }
             position: absolute;
-            top: 25%;
+            top: 24%;
             right: 0;
             z-index: var(--z-tooltip);
          }
@@ -409,6 +423,12 @@ body.dark-theme{
          }
       }
 }
+
+.content__h2,
+.content .line{
+   padding-left: 3.3rem;
+}
+
 
 .reverse {
    width: 100%;
@@ -423,13 +443,28 @@ body.dark-theme{
    top: 7.5%;
    text-transform: uppercase;
    color: var(--text-color-light);
+   font-size: var(--small-font-size);
+   letter-spacing: .4rem;
 }
+
 .reverse .home__img-bg{
    width: 100%;
 }
 .reverse .content {
+   & .line{
+      padding-left: 0;
+      padding-right: 3.3rem;
+   }
+   
    flex-direction: row-reverse;
    color: var(--text-color-light);
+
+   &__info{
+      padding: 0 .6rem 0 3.2rem;
+   }
+   &__images{
+      max-width: 588px;
+   }
 }
 
 .reverse .content__img-square {
@@ -601,6 +636,7 @@ opacity: 1;
 
    &__container{
       min-height: 32.8125rem;
+      overflow-x: auto;
    }
 
    &__content {
@@ -865,3 +901,18 @@ td{
    bottom: 5%;
 }
 
+@media screen and (min-width: 2500px) {
+   .home{
+      height: 100vh;
+      
+      &__container{
+         height: 100%;
+      }
+   }
+}
+
+@media screen and (max-width: 1300px) {
+   section {
+      padding: 0 12px;
+   }
+}

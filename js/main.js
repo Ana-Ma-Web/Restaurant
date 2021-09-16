@@ -34,10 +34,30 @@ let Swiper1 = new Swiper(slider, {
 });
 
 let Swiper2 = new Swiper(sliderGallery, {
-   slidesPerView: 4,
+   slidesPerView: 3,
    loopedSlides: 5,
    loop: false,
    spaceBetween: 0,
+   breakpoints:{
+      1076:{
+         slidesPerView: 4
+      },
+      1438:{
+         slidesPerView: 5
+      },
+      1799:{
+         slidesPerView: 6
+      },
+      2158: {
+         slidesPerView: 7
+      },
+      2520: {
+         slidesPerView: 8
+      },
+      2880: {
+         slidesPerView: 9
+      },
+   }
 });
 
 
