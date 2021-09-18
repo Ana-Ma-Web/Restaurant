@@ -250,6 +250,7 @@ body.dark-theme .table__tabs-item {
 
 .nav__item {
   min-width: 6rem;
+  text-align: center;
 }
 
 .nav__logo {
@@ -265,6 +266,16 @@ body.dark-theme .table__tabs-item {
 
 .nav__change-theme {
   text-align: center;
+}
+
+.nav__toggle {
+  width: 40px;
+  height: 40px;
+  background-image: url(../img/icons/close-fill.svg);
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+          background-size: contain;
+  display: none;
 }
 
 .change-theme {
@@ -1122,9 +1133,6 @@ td {
     height: 50px;
     width: 50px;
     margin: auto;
-  }
-  .header {
-    height: 4.69rem;
   }
   .home__data {
     padding-bottom: 0;

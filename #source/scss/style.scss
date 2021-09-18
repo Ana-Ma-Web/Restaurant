@@ -164,6 +164,7 @@ body.dark-theme{
 
    &__item{
       min-width: 6rem;
+      text-align: center;
    }
 
    &__logo {
@@ -183,6 +184,15 @@ body.dark-theme{
 
    &__change-theme {
       text-align: center;
+   }
+
+   &__toggle{
+      width: 40px;
+      height: 40px;
+      background-image: url(../img/icons/close-fill.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      display: none;
    }
 }
 
@@ -948,9 +958,9 @@ td{
       margin: auto;
    }
 
-   .header {
-      height: 4.69rem;
-   }
+   // .header {
+   //    height: 4.69rem;
+   // }
 
    .home__data {
       padding-bottom: 0;
@@ -958,7 +968,6 @@ td{
 }
 
 @media (max-width: 575.98px) {
-   
 }
 
 @media screen and (min-width: 2500px) {
