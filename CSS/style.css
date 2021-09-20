@@ -276,16 +276,19 @@ body.dark-theme .table__tabs-item {
   background-repeat: no-repeat;
   -webkit-background-size: contain;
           background-size: contain;
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
+  cursor: pointer;
 }
 
 .nav__toggle-close {
   background-image: url(../img/icons/close-fill.svg);
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  display: none;
 }
 
 .nav__toggle-open {
+  margin: 1rem 1rem 0 auto;
   background-image: url(../img/icons/menu-line.svg);
 }
 
@@ -800,10 +803,6 @@ input::placeholder, select::placeholder {
   background-color: var(--border-color);
 }
 
-.swiper-pagination-bullet:hover {
-  background-color: var(--first-color);
-}
-
 .swiper-pagination-bullet-active {
   background-color: white;
 }
@@ -1111,6 +1110,16 @@ td {
 }
 
 @media (max-width: 1199.98px) {
+  .content {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .content__info {
+    padding: 0 1rem 0 0;
+    width: 75%;
+  }
   .content__img-square {
     top: 20%;
     max-width: 160px;
@@ -1134,14 +1143,23 @@ td {
   .form__link {
     padding-left: 2.5rem;
   }
+  .form__column {
+    width: 50%;
+  }
+  .input-item, .select, .select__item {
+    width: 100%;
+  }
   .contact__button {
     width: 33%;
   }
 }
 
 @media (max-width: 991.98px) {
+  h1 {
+    font-size: 54px;
+  }
   .home__container {
-    max-height: 500px;
+    max-height: 400px;
     padding-top: 4.69rem;
   }
   .home__arrow {
@@ -1151,15 +1169,43 @@ td {
     -webkit-flex-basis: auto;
         -ms-flex-preferred-size: auto;
             flex-basis: auto;
-    margin-top: auto;
+    margin-bottom: 7%;
+  }
+  .home__data {
+    -webkit-flex-basis: auto;
+        -ms-flex-preferred-size: auto;
+            flex-basis: auto;
+    margin-left: auto;
+    height: 100%;
+  }
+  .home__opening-hours {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+  }
+  .home__opening-hours div {
+    -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+            transform: rotate(0deg);
+    margin: 0;
+  }
+  .home__social {
+    height: 80%;
+    -webkit-flex-basis: auto;
+        -ms-flex-preferred-size: auto;
+            flex-basis: auto;
   }
   .nav__menu {
     height: 100vh;
     width: 150px;
     position: fixed;
     top: 0;
-    right: 0;
+    right: -100%;
     background-color: var(--first-color);
+    padding: 3rem 1rem 1rem 1rem;
+    -webkit-transition: .4s;
+    -o-transition: .4s;
+    transition: .4s;
   }
   .nav__list {
     -webkit-box-orient: vertical;
@@ -1167,14 +1213,12 @@ td {
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
   }
   .nav__item {
-    width: 4rem;
-    margin-bottom: 2rem;
+    max-height: 4rem;
   }
   .nav__link:hover {
     color: var(--text-color-light);
@@ -1184,6 +1228,13 @@ td {
     width: 50px;
     margin: auto;
     display: none;
+  }
+  .home__arrow-link,
+  .social__link-facebook,
+  .social__link-twitter,
+  .social__link-instagram {
+    width: 2rem;
+    height: 2rem;
   }
   .active-link:hover {
     color: var(--text-color-light);
@@ -1359,16 +1410,39 @@ td {
   table {
     width: 48rem;
   }
-  .swiper-horizontal > .swiper-pagination-bullets,
-  .swiper-pagination-bullets.swiper-pagination-horizontal {
-    bottom: .2rem;
-  }
   .scrollup {
     left: 5%;
+  }
+  .show-menu {
+    right: 0;
+  }
+  .show-menu .nav__toggle {
+    display: block;
+  }
+  .swiper-horizontal
+.swiper-pagination-bullets,
+  .swiper-pagination-bullets
+.swiper-pagination-horizontal {
+    bottom: 1rem;
+    width: 30%;
+  }
+  .specialties .section-title {
+    left: 6rem;
+  }
+  .specialties .content {
+    padding: 0;
+  }
+  .specialties .content__images {
+    max-width: 260px;
+    padding: 3rem 0;
   }
 }
 
 @media (max-width: 575.98px) {
+  .table {
+    max-width: 320px;
+    overflow: hidden;
+  }
   .nav__list {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
