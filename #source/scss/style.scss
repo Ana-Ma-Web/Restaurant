@@ -701,7 +701,7 @@ opacity: 1;
       opacity: 0;
       display: flex;
       justify-content: center;
-      text-align-last: left;
+      text-align: left;
       &_active {
          position: static;
          opacity: 1;
@@ -725,9 +725,19 @@ opacity: 1;
    &__text {
       font-family: var(--title-font);
       font-size: var(--normal-font-size);
-      text-overflow: ellipsis;
+      // overflow: hidden;
+      // text-overflow: ellipsis;
+      // max-width: 5rem;
+      // max-height: 2rem;
 
 
+      &_title,
+      &_discription{
+         display: -webkit-box;
+         -webkit-line-clamp: 1;
+         -webkit-box-orient: vertical;  
+         overflow: hidden;
+         }
       &_title {
       
       }
@@ -735,7 +745,6 @@ opacity: 1;
       &_discription {
          color: var(--input-color-text);
          font-size: var(--smallest-font-size);
-
       }
    }
 

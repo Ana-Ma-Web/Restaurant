@@ -860,7 +860,7 @@ input::placeholder, select::placeholder {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  text-align-last: left;
+  text-align: left;
 }
 
 .table__content_active {
@@ -890,8 +890,13 @@ input::placeholder, select::placeholder {
 .table__text {
   font-family: var(--title-font);
   font-size: var(--normal-font-size);
-  -o-text-overflow: ellipsis;
-     text-overflow: ellipsis;
+}
+
+.table__text_title, .table__text_discription {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .table__text_discription {
