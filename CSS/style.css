@@ -849,15 +849,18 @@ input::placeholder, select::placeholder {
   color: var(--first-color);
 }
 
-.table__container {
-  min-height: 32.8125rem;
-  overflow-x: auto;
-}
-
 .table__content {
   position: absolute;
-  left: -100%;
   opacity: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align-last: left;
 }
 
 .table__content_active {
@@ -865,38 +868,40 @@ input::placeholder, select::placeholder {
   opacity: 1;
 }
 
-table {
-  width: 80rem;
-  text-align: left;
+.table__column:not(:last-child) {
+  margin-right: 5%;
 }
 
-tr {
+.table__row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.table__row:not(:last-child) {
+  margin-bottom: 10%;
+}
+
+.table__text {
   font-family: var(--title-font);
   font-size: var(--normal-font-size);
-}
-
-tr:nth-child(even) {
-  color: var(--input-color-text);
-  font-size: var(--smallest-font-size);
-  height: 3rem;
-  vertical-align: top;
-}
-
-tr .price {
-  padding-left: .9rem;
-  vertical-align: top;
-}
-
-tr .price:not(:last-child) {
-  padding-right: 3rem;
-}
-
-td {
-  overflow: hidden;
-  white-space: nowrap;
-  max-width: 13.25rem;
   -o-text-overflow: ellipsis;
      text-overflow: ellipsis;
+}
+
+.table__text_discription {
+  color: var(--input-color-text);
+  font-size: var(--smallest-font-size);
+}
+
+.table__price {
+  margin-left: 1rem;
+  min-width: 5rem;
 }
 
 .events {
@@ -1219,6 +1224,7 @@ td {
   }
   .nav__item {
     max-height: 4rem;
+    height: 100%;
   }
   .nav__link:hover {
     color: var(--text-color-light);
@@ -1407,9 +1413,6 @@ td {
   .contact__container {
     padding: 2rem 0;
   }
-  table {
-    width: 48rem;
-  }
   .scrollup {
     left: 5%;
   }
@@ -1439,10 +1442,6 @@ td {
 }
 
 @media (max-width: 575.98px) {
-  .table {
-    max-width: 320px;
-    overflow: hidden;
-  }
   .nav__list {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
