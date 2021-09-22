@@ -426,11 +426,11 @@ body.dark-theme{
    &__img {
       text-align: left;
       & img {
-         max-width: 80%;
+         max-width: 81%;
       }
       &-square {
          position: absolute;
-         top: 25%;
+         top: 24%;
          right: 0;
          z-index: var(--z-tooltip);
          background-image: url(../img/square.svg);
@@ -487,9 +487,14 @@ body.dark-theme{
    }
 }
 
-.content__h2,
-.content .line{
-   padding-left: 3.3rem;
+.about{
+   & .content__h2{
+      padding-left: 3.6rem;
+   }
+   & .content .line{
+      padding-left: 3.3rem;
+      // margin: 5rem;
+   }
 }
 
 .reverse {
@@ -502,7 +507,7 @@ body.dark-theme{
    transform: translate(-50%, -50%);
    display: block;
    position: absolute;
-   top: 7.5%;
+   top: 7.75%;
    text-transform: uppercase;
    color: var(--text-color-light);
    font-size: var(--small-font-size);
@@ -513,6 +518,9 @@ body.dark-theme{
    width: 100%;
 }
 .reverse .content {
+   &__h2{
+      padding: 0;
+   }
    & .line{
       padding-left: 0;
       padding-right: 3.3rem;
@@ -525,7 +533,7 @@ body.dark-theme{
       padding: 0 .6rem 0 3.2rem;
    }
    &__images{
-      max-width: 588px;
+      max-width: 600px;
    }
 }
 
@@ -537,9 +545,29 @@ body.dark-theme{
    margin-left: auto;
 }
 
+.team{
+   & .content{
+      &__info {
+         padding: 0 1.9rem 0 1.5rem;
+      }
+      & .line{
+         padding: 0 0 0 3px;
+      }
+      &__images{
+         width: 588px;
+      }
+   }
+   
+
+   & hr{
+      width: 63px;
+   }
+}
+
+
 .form {
    &__title{
-      margin-bottom: .7rem;
+      margin-bottom: 1rem;
    }
 
    &__columns {
@@ -559,10 +587,13 @@ body.dark-theme{
 .select {
    margin-bottom: 10px;
 }
+.form__input:last-child{
+   margin-bottom: 8px;
+}
 
 input, select {
-   padding: 1.25rem;
-   &::placeholder {
+   padding: 1.31rem;
+      &::placeholder {
       color: var(--input-color-text);
    }
 }
@@ -600,38 +631,59 @@ input, select {
 
 .booking {
    position: relative;
+   & .content{
+      &__h2{
+         padding: 0;
+      }
+      & .line{
+         padding: 0;
+      }
+      &__info{
+         padding: 0px 0 0 3.4rem;
+      }
+      &__images{
+         width: 588px;
+      }
+      &__img-square{
+         top: 26.5%;
+         width: 225px;
+         height: 225px;
+      }
+   }
+   & .select{
+      &__item{
+         // padding: 1rem 1.31rem 1.31rem 1.31rem;
+         padding-top: 1rem;
+      }
+   }
 }
 
 .booking__info,
 .events__info {
    color: var(--text-color);
    opacity: .5;
+   font-size: var(--small-font-size);
    & span {
       font-weight: var(--font-bold);
    }
    position: absolute;
-   bottom: 5%;
+   bottom: 6%;
    width: 100%;
    text-align: center;
 }
 
-//==============MENU================
-.menu {
-   text-align: center;
 
-   &__container {
-      padding: 100px 0;
+.specialties{
+   & .section-title{
+      left: 50.3%;
    }
-   &__title {
-      max-width: 34.375rem;
-      margin: 0 auto ;
-   }
-
-   &__subtitle {
-      margin-top: .5rem;
-      font-weight: var(--font-bold);
+   & .reverse .content{
+      &__images{
+         max-width: 600px;
+      }
    }
 }
+
 
 // ============ SWIPER ==============
 .swiper-horizontal>.swiper-pagination-bullets, 
@@ -655,6 +707,26 @@ opacity: 1;
    background-color: white;
 }
 
+
+//==============MENU================
+.menu {
+   text-align: center;
+
+   &__container {
+      padding: 95px 0 100px 0;
+   }
+   &__title {
+      max-width: 34.375rem;
+      margin: 0 auto ;
+   }
+
+   &__subtitle {
+      margin-top: 1.1rem;
+      font-weight: var(--font-bold);
+      line-height: 1.8rem;
+      font-size: 1.125rem;
+   }
+}
 //=====================TABS=================
 .table {
 
@@ -664,7 +736,7 @@ opacity: 1;
       max-width: 52.5rem;
       height: 3.125rem;
       width: 100%;
-      margin: 3rem auto;
+      margin: 3rem auto 3.1rem;
       &-item{
          cursor: pointer;
          float: left;
@@ -679,7 +751,7 @@ opacity: 1;
          }
       }
       &-link{
-         padding-top: 1rem;
+         padding-top: 1.1rem;
          color: var(--text-color);
          display: inline-block;
          height: 100%;
@@ -710,7 +782,7 @@ opacity: 1;
 
    &__column {
       &:not(:last-child){
-         margin-right: 5%;
+         margin-right: 6%;
       }
    }
 
@@ -718,17 +790,14 @@ opacity: 1;
       display: flex;
       justify-content: space-between;
       &:not(:last-child){
-         margin-bottom: 10%;
+         margin-bottom: 8.3%;
       }
    }
 
    &__text {
       font-family: var(--title-font);
       font-size: var(--normal-font-size);
-      // overflow: hidden;
-      // text-overflow: ellipsis;
-      // max-width: 5rem;
-      // max-height: 2rem;
+      max-width: 275px;
 
 
       &_title,
@@ -739,7 +808,8 @@ opacity: 1;
          overflow: hidden;
          }
       &_title {
-      
+         font-size: var(--large-font-size);
+         line-height: 1.4rem;
       }
 
       &_discription {
@@ -750,70 +820,14 @@ opacity: 1;
 
    &__price {
       margin-left: 1rem;
-      min-width: 5rem;
+      margin-right: 1px;
+      min-width: 5.6rem;
+      font-size: var(--large-font-size);
+      font-family: var(--title-font);
    }
 
 }
 
-// .table__tabs-link_active {
-// }
-
-// .table__content_active {
-//    position: static;
-//    opacity: 1;
-// }
-
-// .table {
-
-//    &__column {
-//    }
-
-//    &__row {
-//    }
-
-//    &__text {
-
-//       &_title {
-//       }
-
-//       &_discription {
-//       }
-//    }
-
-//    &__price {
-//    }
-// }
-
-
-//=================TABLE============
-// table {
-//    width: 80rem;   
-//    text-align: left;
-// }
-// tr {
-//    font-family: var(--title-font);
-//    font-size: var(--normal-font-size);
-//    &:nth-child(even){
-//       color: var(--input-color-text);
-//       font-size: var(--smallest-font-size);
-//       height: 3rem;
-//       vertical-align: top;
-//    }
-//    & .price {
-//       padding-left: .9rem;
-//       vertical-align: top;
-//       &:not(:last-child){
-//          padding-right: 3rem;
-//          }
-//       }
-// }
-
-// td{
-//    overflow: hidden;
-//    white-space: nowrap;
-//    max-width: 13.25rem;
-//    text-overflow: ellipsis;
-// }
 
 .events {
    position: relative;
@@ -848,7 +862,7 @@ opacity: 1;
    text-align: center;
 
    &__container {
-      padding: 100px 0;
+      padding: 95px 0 100px;
    }
 
    &__h2 {
@@ -858,7 +872,7 @@ opacity: 1;
       font-weight: var(--font-bold);
       font-size: var(--large-font-size);
       max-width: 34.69rem;
-      margin: 1rem auto 2rem;
+      margin: 1.1rem auto 3.1rem;
    }
 
    &__form {
@@ -904,6 +918,7 @@ opacity: 1;
    &__contacts {
       display: flex;
       justify-content: space-between;
+      margin-top: .3rem;
    }
 
    &__links {
