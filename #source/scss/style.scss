@@ -144,7 +144,7 @@ body.dark-theme{
    left: 0;
    z-index: var(--z-fixed);
    height: var(--header-height);
-   overflow: hidden;
+   // overflow: hidden;
 }
 
 
@@ -206,6 +206,7 @@ body.dark-theme{
       &-open{
       margin: 1rem 1rem 0 auto;
       background-image: url(../img/icons/menu-line.svg);
+      display: none;
       }
    }
 }
@@ -399,7 +400,7 @@ body.dark-theme{
    &__info {
       max-width: 640px;
       text-align: center;
-      margin: auto 0;
+      margin-top: 110px;
       padding: 0 3.2rem 0 .6rem;
       max-height: 24.62rem;
       overflow: auto;
@@ -500,7 +501,36 @@ body.dark-theme{
 .reverse {
    width: 100%;
    position: relative;
+   & .content__img-square {
+      left: 0;
+   }
+   & img {
+      margin-left: auto;
+   }
+   & .home__img-bg{
+      width: 100%;
+   }
+   & .content {
+      &__h2{
+         padding: 0;
+      }
+      
+      flex-direction: row-reverse;
+      color: var(--text-color-light);
+   
+      &__info{
+         padding: 0 .6rem 0 3.2rem;
+      }
+      &__images{
+         max-width: 600px;
+      }
+   }
 }
+.line-reverse{
+   padding-left: 0;
+   padding-right: 3.3rem;
+}
+
 
 .section-title {
    left: 50%;
@@ -514,36 +544,6 @@ body.dark-theme{
    letter-spacing: .4rem;
 }
 
-.reverse .home__img-bg{
-   width: 100%;
-}
-.reverse .content {
-   &__h2{
-      padding: 0;
-   }
-   & .line{
-      padding-left: 0;
-      padding-right: 3.3rem;
-   }
-   
-   flex-direction: row-reverse;
-   color: var(--text-color-light);
-
-   &__info{
-      padding: 0 .6rem 0 3.2rem;
-   }
-   &__images{
-      max-width: 600px;
-   }
-}
-
-.reverse .content__img-square {
-   left: 0;
-}
-
-.reverse img {
-   margin-left: auto;
-}
 
 .team{
    & .content{
@@ -631,16 +631,20 @@ input, select {
 
 .booking {
    position: relative;
+   & .reverse .line{
+      padding: 0;
+   }
+
+   & .content__info{
+      margin-top: 56px;
+      padding: 0px 0 0 3.4rem;
+   }
    & .content{
       &__h2{
          padding: 0;
       }
-      & .line{
-         padding: 0;
-      }
-      &__info{
-         padding: 0px 0 0 3.4rem;
-      }
+      // &__info{
+      // }
       &__images{
          width: 588px;
       }
@@ -672,16 +676,21 @@ input, select {
    text-align: center;
 }
 
-
 .specialties{
    & .section-title{
       left: 50.3%;
    }
-   & .reverse .content{
-      &__images{
-         max-width: 600px;
+   & .reverse {
+      & .content{
+         &__images{
+            max-width: 600px;
+         }
       }
    }
+}
+
+.line_slide{
+   padding: 0;
 }
 
 
@@ -1067,12 +1076,12 @@ opacity: 1;
 }
 
 @media (max-width: 991.98px) {
-h1{
-   font-size: 54px;
-}
+   h1{
+      font-size: 54px;
+   }
 
    .header {
-}
+   }
 
    .home{
       &__container {
@@ -1142,6 +1151,13 @@ h1{
          margin: auto;
          display: none;
       }
+
+      &__toggle{
+         &-open{
+            display: block;
+         }
+      }
+
    }
 
 
@@ -1207,15 +1223,11 @@ h1{
       
       &__images{
          width: 40%;
-         // max-height: 10.5rem;
          margin: auto 0;
       }
       &__img{
-         // max-height: 10.5rem;
 
          & img{
-            // max-height: 10.5rem;
-            // max-width: 86%;
             max-width: 100%;
             padding-right: 50px;
          }
@@ -1238,7 +1250,6 @@ h1{
          width: 50%;
 
          & .content__img img {
-            // max-width: 100%;
             padding: 0 0 0 50px;
          }
          & .content__img-square{
@@ -1265,9 +1276,9 @@ h1{
          &__info{
             padding: 0 1rem;
          }
-         & .line {
-            padding: 0;
-         }
+         // & .line {
+         //    padding: 0;
+         // }
          &__images{
             max-width: 40%;
          }
@@ -1341,9 +1352,6 @@ h1{
       padding: 2rem 0;
 
    }
-   // table{
-   //    width: 48rem;
-   // }
 
    .scrollup{
       left: 5%;
@@ -1355,9 +1363,6 @@ h1{
          display: block;
       }
    }
-   
-
-
 
    .swiper-horizontal
    .swiper-pagination-bullets,
@@ -1366,7 +1371,6 @@ h1{
       bottom: 1rem;
       width: 30%;
    }
-
 
    .specialties {
       & .section-title{
@@ -1379,9 +1383,7 @@ h1{
             padding: 3rem 0;
          }
       }
-}
-
-
+   }
 }
 
 @media (max-width: 575.98px) {
@@ -1397,20 +1399,7 @@ h1{
       }
    }
 
-   // td {
-   //    max-width: 10rem;
-   // }
 
-   // tr .price{
-   //    padding-left: 1rem;
-   //    &:not(:last-child) {
-   //       padding-right: 1rem;
-   //    }
-   // }
-
-   // tr .price {
-   //    font-size: 14px;
-   // }
 
 }
 

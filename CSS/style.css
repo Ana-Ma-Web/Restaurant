@@ -221,7 +221,6 @@ body.dark-theme .table__tabs-item {
   left: 0;
   z-index: var(--z-fixed);
   height: var(--header-height);
-  overflow: hidden;
 }
 
 .nav {
@@ -290,6 +289,7 @@ body.dark-theme .table__tabs-item {
 .nav__toggle-open {
   margin: 1rem 1rem 0 auto;
   background-image: url(../img/icons/menu-line.svg);
+  display: none;
 }
 
 .change-theme {
@@ -519,7 +519,7 @@ body.dark-theme .table__tabs-item {
 .content__info {
   max-width: 640px;
   text-align: center;
-  margin: auto 0;
+  margin-top: 110px;
   padding: 0 3.2rem 0 .6rem;
   max-height: 24.62rem;
   overflow: auto;
@@ -628,18 +628,12 @@ body.dark-theme .table__tabs-item {
   position: relative;
 }
 
-.section-title {
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  display: block;
-  position: absolute;
-  top: 7.75%;
-  text-transform: uppercase;
-  color: var(--text-color-light);
-  font-size: var(--small-font-size);
-  letter-spacing: .4rem;
+.reverse .content__img-square {
+  left: 0;
+}
+
+.reverse img {
+  margin-left: auto;
 }
 
 .reverse .home__img-bg {
@@ -659,11 +653,6 @@ body.dark-theme .table__tabs-item {
   padding: 0;
 }
 
-.reverse .content .line {
-  padding-left: 0;
-  padding-right: 3.3rem;
-}
-
 .reverse .content__info {
   padding: 0 .6rem 0 3.2rem;
 }
@@ -672,12 +661,23 @@ body.dark-theme .table__tabs-item {
   max-width: 600px;
 }
 
-.reverse .content__img-square {
-  left: 0;
+.line-reverse {
+  padding-left: 0;
+  padding-right: 3.3rem;
 }
 
-.reverse img {
-  margin-left: auto;
+.section-title {
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: block;
+  position: absolute;
+  top: 7.75%;
+  text-transform: uppercase;
+  color: var(--text-color-light);
+  font-size: var(--small-font-size);
+  letter-spacing: .4rem;
 }
 
 .team .content__info {
@@ -778,16 +778,17 @@ input::placeholder, select::placeholder {
   position: relative;
 }
 
-.booking .content__h2 {
-  padding: 0;
-}
-
-.booking .content .line {
+.booking .reverse .line {
   padding: 0;
 }
 
 .booking .content__info {
+  margin-top: 56px;
   padding: 0px 0 0 3.4rem;
+}
+
+.booking .content__h2 {
+  padding: 0;
 }
 
 .booking .content__images {
@@ -826,6 +827,10 @@ input::placeholder, select::placeholder {
 
 .specialties .reverse .content__images {
   max-width: 600px;
+}
+
+.line_slide {
+  padding: 0;
 }
 
 .swiper-horizontal > .swiper-pagination-bullets,
@@ -1314,6 +1319,9 @@ input::placeholder, select::placeholder {
     margin: auto;
     display: none;
   }
+  .nav__toggle-open {
+    display: block;
+  }
   .home__arrow-link,
   .social__link-facebook,
   .social__link-twitter,
@@ -1412,9 +1420,6 @@ input::placeholder, select::placeholder {
   }
   .reverse .content__info {
     padding: 0 1rem;
-  }
-  .reverse .content .line {
-    padding: 0;
   }
   .reverse .content__images {
     max-width: 40%;
