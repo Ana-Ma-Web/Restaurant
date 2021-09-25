@@ -264,6 +264,12 @@ body.dark-theme{
    }
 }
 
+.anchor {
+   display: block;
+   position: relative;
+   top: -99px;
+   visibility: hidden;
+}
 
 
       // ========== HOME SECTION ===========
@@ -411,10 +417,11 @@ body.dark-theme{
    &__info {
       max-width: 640px;
       text-align: center;
-      margin-top: 110px;
       padding: 0 3.2rem 0 .6rem;
       max-height: 24.62rem;
       overflow: auto;
+            // margin-top: 106px;
+      margin: auto;
       
    }
 
@@ -505,10 +512,10 @@ body.dark-theme{
 
 .about{
    & .content__h2{
-      padding-left: 3.6rem;
+      padding-left: 0.6rem;
    }
    & .content .line{
-      padding-left: 3.3rem;
+      padding-left: 1.3rem;
    }
 }
 
@@ -562,7 +569,7 @@ body.dark-theme{
 .team{
    & .content{
       &__info {
-         padding: 0 1.9rem 0 1.5rem;
+         padding: 0px 0rem 0 3.3em;
       }
       & .line{
          padding: 0 0 0 3px;
@@ -645,6 +652,7 @@ input, select {
 }
 
 .booking {
+
    position: relative;
    & .reverse .line{
       padding: 0;
@@ -652,7 +660,7 @@ input, select {
 
    & .content__info{
       margin-top: 56px;
-      padding: 0px 1rem 0 3.4rem;
+      padding: 0px 2.6rem 0 1.6rem;
       width: 49.7%;
    }
    & .content{
@@ -671,7 +679,7 @@ input, select {
    & .select{
       &__item{
          // padding: 1rem 1.31rem 1.31rem 1.31rem;
-         padding-top: 1rem;
+         padding-top: 1.2rem;
       }
    }
 }
@@ -696,10 +704,14 @@ input, select {
    }
    & .reverse {
       & .content{
+         &__info{
+            padding: 0 0rem 0 4.3rem;
+         }
          &__images{
             max-width: 600px;
          }
       }
+      
    }
 }
 
@@ -734,7 +746,6 @@ opacity: 1;
 //==============MENU================
 .menu {
    text-align: center;
-
    &__container {
       padding: 95px 0 100px 0;
    }
@@ -871,9 +882,10 @@ opacity: 1;
    }
 }
 
-
+//===================Gallery ===============
+.gallery{
+}
 // ================== SWIPER =============== 
-
 .gallery .swiper-slide {
    max-height: 360px;
    max-width: 360px;
@@ -1077,6 +1089,7 @@ opacity: 1;
    }
 
    .booking{
+      
       & .content__info{
          margin: auto 0;
       }
@@ -1109,6 +1122,10 @@ opacity: 1;
    }
    h2{
       font-size: 1.5rem;
+   }
+
+   .anchor{
+      top: 0;
    }
 
    .header {
@@ -1228,11 +1245,6 @@ opacity: 1;
       }
    }
    
-
-   // .home__data {
-   //    padding-bottom: 0;
-   // }
-
    .section-title{
       top: 1rem;
    }
@@ -1496,6 +1508,10 @@ opacity: 1;
          top: 75px;
       }
    }
+   .gallery{
+      margin: 0;
+      border: none;
+   }
 }
 
 @media (max-width: 575.98px) {
@@ -1548,7 +1564,7 @@ opacity: 1;
       &__images{
          width: 300px;
          height: 250px;
-         margin: 0 auto;
+         margin: 1rem auto 0;
       }
       &__img{
          // text-align: left;
@@ -1568,14 +1584,14 @@ opacity: 1;
          &__images{
             width: 250px;
             height: 250px;
-            margin: 0 auto;
+            margin: 1rem auto 0;
          }
          &__img{
-            margin-left: auto;
+            margin-right: auto;
             width: 200px;
             &-square{
-               top: 28%;
-               left: 0;
+               top: 20%;
+               right: 0;
             }
          }
          }
@@ -1616,25 +1632,30 @@ opacity: 1;
 
    .specialties{
       & .content{
-         margin: .5rem;
+         margin-top: 1.5rem;
          &__info{
-            margin-bottom: 1rem;
+            // margin-bottom: 1rem;
          }
          &__images{
             max-width: 300px;
          }
          &__img{
             &-square{
-
             }
          }
       }
       & .section-title{
-         left: 2rem;
+         left: auto;
+         right: 1.5rem;
          top: auto;
-         bottom: 4.5rem;
-         transform-origin: bottom left;
+         bottom: 11rem;
+         transform-origin: top right;
          transform: rotate(-90deg);
+      }
+      & .swiper-horizontal .swiper-pagination-bullets,
+      & .swiper-pagination-bullets .swiper-pagination-horizontal {
+         right: 0;
+         left: auto;
       }
    }
 
@@ -1651,11 +1672,11 @@ opacity: 1;
          }
       }
       & .content__images_right{
-         // & img{
-         //    padding-left: 3rem;
-         // }
       }
-
+      &__info{
+         font-size: var(--smallest-font-size);
+         width: 90%;
+      }
    }
 
 

@@ -348,6 +348,13 @@ body.dark-theme .table__tabs-item {
           border-radius: 1.5px;
 }
 
+.anchor {
+  display: block;
+  position: relative;
+  top: -99px;
+  visibility: hidden;
+}
+
 .home {
   position: relative;
   color: var(--text-color-light);
@@ -528,10 +535,10 @@ body.dark-theme .table__tabs-item {
 .content__info {
   max-width: 640px;
   text-align: center;
-  margin-top: 110px;
   padding: 0 3.2rem 0 .6rem;
   max-height: 24.62rem;
   overflow: auto;
+  margin: auto;
 }
 
 .content__title {
@@ -633,11 +640,11 @@ body.dark-theme .table__tabs-item {
 }
 
 .about .content__h2 {
-  padding-left: 3.6rem;
+  padding-left: 0.6rem;
 }
 
 .about .content .line {
-  padding-left: 3.3rem;
+  padding-left: 1.3rem;
 }
 
 .reverse {
@@ -698,7 +705,7 @@ body.dark-theme .table__tabs-item {
 }
 
 .team .content__info {
-  padding: 0 1.9rem 0 1.5rem;
+  padding: 0px 0rem 0 3.3em;
 }
 
 .team .content .line {
@@ -802,7 +809,7 @@ input::placeholder, select::placeholder {
 
 .booking .content__info {
   margin-top: 56px;
-  padding: 0px 1rem 0 3.4rem;
+  padding: 0px 2.6rem 0 1.6rem;
   width: 49.7%;
 }
 
@@ -821,7 +828,7 @@ input::placeholder, select::placeholder {
 }
 
 .booking .select__item {
-  padding-top: 1rem;
+  padding-top: 1.2rem;
 }
 
 .booking__info,
@@ -842,6 +849,10 @@ input::placeholder, select::placeholder {
 
 .specialties .section-title {
   left: 50.3%;
+}
+
+.specialties .reverse .content__info {
+  padding: 0 0rem 0 4.3rem;
 }
 
 .specialties .reverse .content__images {
@@ -1290,6 +1301,9 @@ input::placeholder, select::placeholder {
   h2 {
     font-size: 1.5rem;
   }
+  .anchor {
+    top: 0;
+  }
   .home__container {
     padding-top: 4.69rem;
   }
@@ -1627,6 +1641,10 @@ input::placeholder, select::placeholder {
   .events .content__img-square {
     top: 75px;
   }
+  .gallery {
+    margin: 0;
+    border: none;
+  }
 }
 
 @media (max-width: 575.98px) {
@@ -1678,7 +1696,7 @@ input::placeholder, select::placeholder {
   .content__images {
     width: 300px;
     height: 250px;
-    margin: 0 auto;
+    margin: 1rem auto 0;
   }
   .content__img {
     width: 250px;
@@ -1700,15 +1718,15 @@ input::placeholder, select::placeholder {
   .reverse .content__images {
     width: 250px;
     height: 250px;
-    margin: 0 auto;
+    margin: 1rem auto 0;
   }
   .reverse .content__img {
-    margin-left: auto;
+    margin-right: auto;
     width: 200px;
   }
   .reverse .content__img-square {
-    top: 28%;
-    left: 0;
+    top: 20%;
+    right: 0;
   }
   .about .content__h2 {
     padding: 0;
@@ -1733,24 +1751,27 @@ input::placeholder, select::placeholder {
     padding: 0 2rem;
   }
   .specialties .content {
-    margin: .5rem;
-  }
-  .specialties .content__info {
-    margin-bottom: 1rem;
+    margin-top: 1.5rem;
   }
   .specialties .content__images {
     max-width: 300px;
   }
   .specialties .section-title {
-    left: 2rem;
+    left: auto;
+    right: 1.5rem;
     top: auto;
-    bottom: 4.5rem;
-    -webkit-transform-origin: bottom left;
-        -ms-transform-origin: bottom left;
-            transform-origin: bottom left;
+    bottom: 11rem;
+    -webkit-transform-origin: top right;
+        -ms-transform-origin: top right;
+            transform-origin: top right;
     -webkit-transform: rotate(-90deg);
         -ms-transform: rotate(-90deg);
             transform: rotate(-90deg);
+  }
+  .specialties .swiper-horizontal .swiper-pagination-bullets,
+  .specialties .swiper-pagination-bullets .swiper-pagination-horizontal {
+    right: 0;
+    left: auto;
   }
   .events .section-title {
     width: 100%;
@@ -1765,6 +1786,10 @@ input::placeholder, select::placeholder {
   }
   .events .content__img {
     width: 300px;
+  }
+  .events__info {
+    font-size: var(--smallest-font-size);
+    width: 90%;
   }
   .form__contacts {
     -webkit-box-orient: vertical;
