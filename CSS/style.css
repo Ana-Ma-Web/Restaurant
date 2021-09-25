@@ -130,6 +130,11 @@ section {
   overflow: hidden;
 }
 
+picture {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 h1, h2 {
   font-family: var(--title-font);
   text-transform: uppercase;
@@ -275,7 +280,7 @@ body.dark-theme .table__tabs-item {
   background-repeat: no-repeat;
   -webkit-background-size: contain;
           background-size: contain;
-  cursor: pointer;
+  background-color: transparent;
 }
 
 .nav__toggle-close {
@@ -493,14 +498,18 @@ body.dark-theme .table__tabs-item {
   left: 0;
   z-index: var(--z-bg);
   overflow: hidden;
-  -o-object-fit: cover;
-     object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 
 .img-bg img {
   -webkit-filter: brightness(40%);
           filter: brightness(40%);
   display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 
 .content {
@@ -1211,9 +1220,27 @@ input::placeholder, select::placeholder {
   nav {
     padding: 0 12px;
   }
+  .nav__logo {
+    height: 100px;
+    width: 100px;
+  }
 }
 
 @media (max-width: 1199.98px) {
+  .home__data {
+    -webkit-flex-basis: auto;
+        -ms-flex-preferred-size: auto;
+            flex-basis: auto;
+    margin-left: auto;
+    height: 100%;
+  }
+  .home__buttons {
+    -webkit-flex-basis: auto;
+        -ms-flex-preferred-size: auto;
+            flex-basis: auto;
+    margin-top: auto;
+    margin-bottom: 7%;
+  }
   .content {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
@@ -1264,24 +1291,10 @@ input::placeholder, select::placeholder {
     font-size: 1.5rem;
   }
   .home__container {
-    max-height: 400px;
     padding-top: 4.69rem;
   }
   .home__arrow {
     display: none;
-  }
-  .home__buttons {
-    -webkit-flex-basis: auto;
-        -ms-flex-preferred-size: auto;
-            flex-basis: auto;
-    margin-bottom: 7%;
-  }
-  .home__data {
-    -webkit-flex-basis: auto;
-        -ms-flex-preferred-size: auto;
-            flex-basis: auto;
-    margin-left: auto;
-    height: 100%;
   }
   .home__opening-hours {
     position: absolute;
@@ -1370,9 +1383,6 @@ input::placeholder, select::placeholder {
   .scroll-header .nav__link:hover {
     color: var(--text-color-light);
   }
-  .home__data {
-    padding-bottom: 0;
-  }
   .section-title {
     top: 1rem;
   }
@@ -1380,9 +1390,10 @@ input::placeholder, select::placeholder {
     padding: 2rem 0;
   }
   .content__info {
-    padding: 2rem 1rem 1rem;
+    margin: 1rem 1rem 1rem;
     width: 65%;
     margin: 0;
+    max-height: 315px;
   }
   .content__form {
     height: 100%;
@@ -1443,8 +1454,8 @@ input::placeholder, select::placeholder {
   }
   .reverse .content__info {
     padding: 0;
-    margin: 2rem 1rem 1rem;
-    max-height: 339px;
+    margin: 1rem 1rem 1rem;
+    max-height: 315px;
   }
   .reverse .content__images {
     width: 200px;
@@ -1589,7 +1600,7 @@ input::placeholder, select::placeholder {
   .swiper-pagination-bullets
 .swiper-pagination-horizontal {
     bottom: 1rem;
-    width: 30%;
+    width: 31%;
   }
   .specialties .section-title {
     left: 6rem;
@@ -1626,9 +1637,6 @@ input::placeholder, select::placeholder {
     height: 2.2rem;
     width: 8rem;
   }
-  .button_alt {
-    display: none;
-  }
   .nav__list {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1637,15 +1645,24 @@ input::placeholder, select::placeholder {
             flex-direction: column;
     height: 100vh;
   }
+  .home {
+    height: 100vh;
+  }
   .home__container {
     padding-top: 2.5rem;
-    max-height: 220px;
   }
   .home__opening-hours {
     display: none;
   }
+  .home__data {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+  }
   .home__social {
-    margin: .5rem 1.2rem 0 auto;
+    position: absolute;
+    right: 1rem;
+    top: 34%;
   }
   .content {
     -webkit-box-orient: vertical;
@@ -1656,6 +1673,7 @@ input::placeholder, select::placeholder {
   }
   .content__info {
     width: 100%;
+    padding: 0;
   }
   .content__images {
     width: 300px;
@@ -1663,18 +1681,104 @@ input::placeholder, select::placeholder {
     margin: 0 auto;
   }
   .content__img {
-    text-align: left;
     width: 250px;
   }
   .content__img-square {
     top: 28%;
     right: 0;
   }
+  .reverse .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .reverse .content__info {
+    margin: 0;
+  }
+  .reverse .content__images {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+  }
+  .reverse .content__img {
+    margin-left: auto;
+    width: 200px;
+  }
+  .reverse .content__img-square {
+    top: 28%;
+    left: 0;
+  }
   .about .content__h2 {
     padding: 0;
   }
   .about .content .line {
     padding: 0;
+  }
+  .booking .content__info {
+    margin: 0 auto 1rem;
+    width: 100%;
+  }
+  .booking .content__images {
+    width: 300px;
+    height: 250px;
+    margin: 0 auto;
+  }
+  .booking .content__img-square {
+    top: 75px;
+  }
+  .booking__info {
+    font-size: var(--smallest-font-size);
+    padding: 0 2rem;
+  }
+  .specialties .content {
+    margin: .5rem;
+  }
+  .specialties .content__info {
+    margin-bottom: 1rem;
+  }
+  .specialties .content__images {
+    max-width: 300px;
+  }
+  .specialties .section-title {
+    left: 2rem;
+    top: auto;
+    bottom: 4.5rem;
+    -webkit-transform-origin: bottom left;
+        -ms-transform-origin: bottom left;
+            transform-origin: bottom left;
+    -webkit-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+  .events .section-title {
+    width: 100%;
+    text-align: center;
+  }
+  .events .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .events .content__img {
+    width: 300px;
+  }
+  .form__contacts {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .form__links {
+    width: 100%;
+  }
+  .contact__button {
+    width: 100%;
+    margin-bottom: .3rem;
   }
 }
 

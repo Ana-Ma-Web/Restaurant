@@ -60,6 +60,9 @@ body {
 section {
    overflow: hidden;
 }
+picture{
+   object-fit: cover;
+}
 
 h1, h2 {
    font-family: var(--title-font);
@@ -194,7 +197,8 @@ body.dark-theme{
       height: 40px;
       background-repeat: no-repeat;
       background-size: contain;
-      cursor: pointer;
+      // cursor: pointer;
+      background-color: transparent;
       &-close{
          background-image: url(../img/icons/close-fill.svg);
          position: absolute;
@@ -263,7 +267,7 @@ body.dark-theme{
 
 
       // ========== HOME SECTION ===========
-      .home {
+.home {
    position: relative;
    color: var(--text-color-light);
    overflow: hidden;
@@ -384,11 +388,18 @@ body.dark-theme{
    left: 0;
    z-index: var(--z-bg);
    overflow: hidden;
-   object-fit: cover;
+   height: 100%;
+   width: 100%;
       & img { 
          filter: brightness(40%);
-         display:block; 
+         display:block;
+         object-fit: cover;
+         height: 100%;
+         width: 100%;
    }
+   // &_item{
+   //    height: 100%;
+   // }
 }
 
 .content {
@@ -1016,9 +1027,30 @@ opacity: 1;
    nav {
       padding: 0 12px;
    }
+   .nav{
+      &__logo{
+         height: 100px;
+         width: 100px;
+      }
+   }
+
 }
 
 @media (max-width: 1199.98px) {
+   .home{
+      &__data{
+      flex-basis: auto;
+      margin-left: auto;
+      height: 100%;
+      }
+      &__buttons{
+         flex-basis: auto;
+         margin-top: auto;
+         margin-bottom: 7%;
+      }
+
+   }
+
 
    .content{
       justify-content: center;
@@ -1084,21 +1116,21 @@ opacity: 1;
 
    .home{
       &__container {
-         max-height: 400px;
+         // max-height: 400px;
          padding-top: 4.69rem;
       }
       &__arrow{
          display: none;
       }
-      &__buttons{
-         flex-basis: auto;
-         margin-bottom: 7%;
-      }
+      // &__buttons{
+      //    flex-basis: auto;
+      //    margin-bottom: 7%;
+      // }
 
       &__data{
-         flex-basis: auto;
-         margin-left: auto;
-         height: 100%;
+         // flex-basis: auto;
+         // margin-left: auto;
+         // height: 100%;
       }
 
       &__opening-hours{
@@ -1167,7 +1199,6 @@ opacity: 1;
 
    }
 
-
    .home__arrow-link,
    .social__link-facebook,
    .social__link-twitter,
@@ -1198,9 +1229,9 @@ opacity: 1;
    }
    
 
-   .home__data {
-      padding-bottom: 0;
-   }
+   // .home__data {
+   //    padding-bottom: 0;
+   // }
 
    .section-title{
       top: 1rem;
@@ -1209,9 +1240,12 @@ opacity: 1;
    .content{
       padding: 2rem 0;
       &__info{
-         padding: 2rem 1rem 1rem;
+         // padding: 2rem 1rem 1rem;
+         margin: 1rem 1rem 1rem;
+
          width: 65%;
          margin: 0;
+         max-height: 315px;
       }
       &__form{
          height: 100%;
@@ -1283,8 +1317,8 @@ opacity: 1;
       & .content{
          &__info{
             padding: 0;
-            margin: 2rem 1rem 1rem;
-            max-height: 339px;
+            margin: 1rem 1rem 1rem;
+            max-height: 315px;
          }
          &__images{
             width: 200px;
@@ -1430,7 +1464,7 @@ opacity: 1;
    .swiper-pagination-bullets
    .swiper-pagination-horizontal {
       bottom: 1rem;
-      width: 30%;
+      width: 31%;
    }
 
    .specialties {
@@ -1472,7 +1506,7 @@ opacity: 1;
       height: 2.2rem;
       width: 8rem;
       &_alt{
-         display: none;
+         // display: none;
       }
    }
    .nav{
@@ -1482,15 +1516,24 @@ opacity: 1;
       }
    }
    .home{
+      height: 100vh;
       &__container{
          padding-top: 2.5rem;
-         max-height: 220px;
+         // max-height: 220px;
       }
       &__opening-hours{
          display: none;
       }
+      &__data{
+         height: 100%;
+         width: 100%;
+         margin: 0;
+      }
       &__social{
-         margin: .5rem 1.2rem 0 auto;
+         // margin: .5rem 1.2rem 0 auto;
+         position: absolute;
+         right: 1rem;
+         top: 34%;
       }
    }
 
@@ -1498,22 +1541,44 @@ opacity: 1;
       flex-direction: column;
       &__info{
          width: 100%;
+         padding: 0;
       }
       &__h2{
       }
       &__images{
          width: 300px;
-      height: 250px;
-      margin: 0 auto;
+         height: 250px;
+         margin: 0 auto;
       }
       &__img{
-         text-align: left;
+         // text-align: left;
          width: 250px;
          &-square{
             top: 28%;
             right: 0;
          }
       }
+   }
+   .reverse{
+      & .content{
+         flex-direction: column;
+         &__info{
+            margin: 0;
+         }
+         &__images{
+            width: 250px;
+            height: 250px;
+            margin: 0 auto;
+         }
+         &__img{
+            margin-left: auto;
+            width: 200px;
+            &-square{
+               top: 28%;
+               left: 0;
+            }
+         }
+         }
    }
    .about .content{
       &__h2{
@@ -1523,6 +1588,90 @@ opacity: 1;
          padding: 0;
 
       }
+   }
+
+   .booking{
+      & .content{
+         &__info{
+            margin: 0 auto 1rem;
+            width: 100%;
+         }
+         &__images{
+            width: 300px;
+            height: 250px;
+            margin: 0 auto;
+         }
+         &__img{
+            &-square{
+               top: 75px;
+            }
+         }
+      }
+
+      &__info{
+         font-size: var(--smallest-font-size);
+         padding: 0 2rem;
+      }
+   }
+
+   .specialties{
+      & .content{
+         margin: .5rem;
+         &__info{
+            margin-bottom: 1rem;
+         }
+         &__images{
+            max-width: 300px;
+         }
+         &__img{
+            &-square{
+
+            }
+         }
+      }
+      & .section-title{
+         left: 2rem;
+         top: auto;
+         bottom: 4.5rem;
+         transform-origin: bottom left;
+         transform: rotate(-90deg);
+      }
+   }
+
+   .events{
+      & .section-title {
+         width: 100%;
+         text-align: center;
+         
+      }
+      & .content{
+         flex-direction: column-reverse;
+         &__img{
+            width: 300px;
+         }
+      }
+      & .content__images_right{
+         // & img{
+         //    padding-left: 3rem;
+         // }
+      }
+
+   }
+
+
+   .form{
+      &__contacts{
+         flex-direction: column-reverse;
+      }
+      &__links{
+         width: 100%;
+
+      }
+   }
+   .contact__button{
+      width: 100%;
+      margin-bottom: .3rem;
+
    }
 }
 
