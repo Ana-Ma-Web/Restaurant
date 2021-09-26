@@ -255,15 +255,24 @@ body.dark-theme .table__tabs-item {
 }
 
 .nav__item {
-  min-width: 4rem;
+  min-width: 6rem;
   text-align: center;
+  height: 3rem;
 }
 
 .nav__logo {
-  height: 150px;
-  width: 150px;
+  height: 130px;
+  width: 130px;
   background-image: url(../img/logo.svg);
-  margin-top: 50%;
+}
+
+.nav__link {
+  display: block;
+  padding: 1rem 1rem 0 1rem;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  width: 100%;
+  height: 100%;
 }
 
 .nav__link:hover {
@@ -785,11 +794,11 @@ input::placeholder, select::placeholder {
 }
 
 .input-item:hover {
-  border: 1px solid var(--first-color);
+  background-color: var(--first-color);
 }
 
 .select:hover {
-  border: 1px solid var(--first-color);
+  background-color: var(--first-color);
 }
 
 .select__item {

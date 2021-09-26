@@ -104,24 +104,21 @@ themeButton.addEventListener('click', () => {
 
 
 // ========== SCROLL SECTION ACTIVE LINK ==========
-const sections = document.querySelectorAll('section[id]')
 
-function scrollActive(){
-   const scrollY = window.pageYOffset
+window.addEventListener('scroll', () => {
+   let scrollDistance = window.scrollY;
 
-   sections.forEach(current =>{
-      const sectionHeight = current.offsetHeight
-      const sectionTop = current.offsetTop - 50;
-      sectionId = current.getAttribute('id')
-
-      if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
-      }else{
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
+   document.querySelectorAll('section').forEach((el, i) => {
+      if (el.offsetTop - 300 <= scrollDistance){
+         document.querySelectorAll('.nav a').forEach((el) => {
+            if (el.classList.contains('active-link')){
+               el.classList.remove('active-link');
+            }
+         });
+         document.querySelectorAll('.nav li')[i].querySelector('a').classList.add('active-link')
       }
-   })
-}
-window.addEventListener('scroll', scrollActive)
+   });
+});
 
 
 // ================ SHOW MENU =================
