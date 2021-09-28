@@ -106,10 +106,8 @@ themeButton.addEventListener('click', () => {
 // ========== SCROLL SECTION ACTIVE LINK ==========
 
 window.addEventListener('scroll', () => {
-   let scrollDistance = window.scrollY;
-
    document.querySelectorAll('section').forEach((el, i) => {
-      if (el.offsetTop - 300 <= scrollDistance){
+      if (el.offsetTop - 300 <= window.scrollY){
          document.querySelectorAll('.nav a').forEach((el) => {
             if (el.classList.contains('active-link')){
                el.classList.remove('active-link');
@@ -136,3 +134,34 @@ if(navClose){
       navMenu.classList.remove('show-menu')
    })
 }
+
+// =========== ANIMATIONS ===========
+document.querySelectorAll('.home-animation').forEach(el => {
+      el.classList.add('animate')
+});
+window.addEventListener('scroll', () => {
+   document.querySelectorAll('.team-animation').forEach(el => {
+      if (scrollY + 400 >= document.getElementById('team-section').offsetTop){
+         el.classList.add('animate')
+      } 
+   });
+});
+window.addEventListener('scroll', () => {
+   document.querySelectorAll('.specialties-animation').forEach(el => {
+      if (scrollY + 400 >= document.getElementById('specialties-section').offsetTop){
+         el.classList.add('animate')
+      } 
+   });
+});
+window.addEventListener('scroll', () => {
+   document.querySelectorAll('.events-animation').forEach(el => {
+      if (scrollY + 400 >= document.getElementById('events-section').offsetTop){
+         el.classList.add('animate')
+      } 
+   });
+});
+
+
+
+
+

@@ -12,6 +12,7 @@
 
 <body>
     <header class="header" id="header">
+
         <nav class="nav container">
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
@@ -59,6 +60,24 @@
     <main>
         <section class="home" id="home">
             <div class="home__img-bg img-bg">
+                <div class="home-decor container">
+                    <div class="home-decor__header">
+                        <div class="home-decor__header-left">
+                            <div class="home-decor__header-left_left home-animation"></div>
+                            <div class="home-decor__header-left_right home-animation"></div>
+                        </div>
+                        <div class="home-decor__header-right">
+                            <div class="home-decor__header-right_left home-animation"></div>
+                            <div class="home-decor__header-right_right home-animation"></div>
+                        </div>
+                    </div>
+                    <div class="home-decor__main">
+                        <div class="home-decor__main-middle home-animation">
+                            <div class="home-decor__main-middle_left home-animation"></div>
+                            <div class="home-decor__main-middle_right home-animation"></div>
+                            </div>
+                    </div>
+                </div>
                 <picture>
                     <source srcset="img/bg/home-6000x4000.jpg" type="image/jpeg" media="(min-width:3841px)">
                     <source srcset="img/bg/home-3840x2560.jpg" type="image/jpeg" media="(min-width:2561px)">
@@ -83,7 +102,7 @@
                         <button class="button button_alt">explore</button>
                     </div>
                     <div class="home__arrow">
-                        <a href="#about" class="home__arrow-link"></a>
+                        <a href="#about" class="home__arrow-link home-animation"></a>
                     </div>
                 </div>
                 <div class="home__social">
@@ -97,7 +116,7 @@
                 </div>
             </div>
         </section>
-        <section class="about" >
+        <section class="about">
             <a class="anchor" id="about"></a>
             <div class="content container">
                 <div class="content__info">
@@ -121,22 +140,33 @@
                 </div>
             </div>
         </section>
-        <section class="team reverse">
+        <section class="team reverse" id="team-section">
             <a class="anchor" id="team"></a>
             <span class="section-title">our team</span>
             <div class="team__img-bg img-bg">
+                <div class="team-decor container">
+                    <div class="team-decor__middle team-animation">
+                        <div class="team-decor__left"></div>
+                    </div>
+                </div>
                 <picture>
-                    <source class="img-bg_item" srcset="img/bg/bg-2-6000x700.jpg" type="image/jpeg" media="(min-width:3841px)">
-                    <source class="img-bg_item" srcset="img/bg/bg-2-3840x700.jpg" type="image/jpeg" media="(min-width:2561px)">
-                    <source class="img-bg_item" srcset="img/bg/bg-2-2560x700.jpg" type="image/jpeg" media="(min-width:1921px)">
-                    <source class="img-bg_item" srcset="img/bg/bg-2-1920x700.jpg" type="image/jpeg" media="(min-width:1025px)">
-                    <source class="img-bg_item" srcset="img/bg/bg-2-1024x683.jpg" type="image/jpeg" media="(min-width:426px)">
-                    <source class="img-bg_item" srcset="img/bg/bg-2-430x683.jpg" type="image/jpeg" media="(max-width:425px)">
+                    <source class="img-bg_item" srcset="img/bg/bg-2-6000x700.jpg" type="image/jpeg"
+                        media="(min-width:3841px)">
+                    <source class="img-bg_item" srcset="img/bg/bg-2-3840x700.jpg" type="image/jpeg"
+                        media="(min-width:2561px)">
+                    <source class="img-bg_item" srcset="img/bg/bg-2-2560x700.jpg" type="image/jpeg"
+                        media="(min-width:1921px)">
+                    <source class="img-bg_item" srcset="img/bg/bg-2-1920x700.jpg" type="image/jpeg"
+                        media="(min-width:1025px)">
+                    <source class="img-bg_item" srcset="img/bg/bg-2-1024x683.jpg" type="image/jpeg"
+                        media="(min-width:426px)">
+                    <source class="img-bg_item" srcset="img/bg/bg-2-430x683.jpg" type="image/jpeg"
+                        media="(max-width:425px)">
                     <img src="img/bg/home-1920x12801.jpg" alt="home">
                 </picture>
             </div>
-            <div class="content container">
-                <div class="content__info">
+            <div class="content container" >
+                <div class="content__info" >
                     <h2 class="content__h2">master chef</h2>
                     <div class="line line-reverse">
                         <hr>
@@ -160,7 +190,7 @@
                 </div>
             </div>
         </section>
-        <section class="booking" >
+        <section class="booking">
             <a class="anchor" id="booking"></a>
 
             <div class="content container">
@@ -223,9 +253,16 @@
                 <span> +40 729 131 637/+40 726 458 782</span>
             </div>
         </section>
-        <section class="specialties reverse">
+        <section class="specialties reverse" id="specialties-section">
             <span class="section-title">specialties</span>
+            <div class="specialties-decor container">
+                <div class="specialties-decor__middle specialties-animation">
+                    <div class="specialties-decor__left"></div>
+                </div>
+            </div>
+
             <div class="specialties__img-bg img-bg">
+                
                 <picture>
                     <source srcset="img/bg/bg-3-6000x700.jpg" type="image/jpeg" media="(min-width:3841px)">
                     <source srcset="img/bg/bg-3-3840x700.jpg" type="image/jpeg" media="(min-width:2561px)">
@@ -314,7 +351,7 @@
                 <div class="swiper-pagination"></div>
             </div>
         </section>
-        <section class="menu" >
+        <section class="menu">
             <a class="anchor" id="menu"></a>
 
             <div class="menu__container container">
@@ -1599,10 +1636,15 @@
                 </div>
             </div>
         </section>
-        <section class="events" >
+        <section class="events" id="events-section">
             <a class="anchor" id="events"></a>
-
             <span class="section-title">private events</span>
+            <div class="events-decor container">
+                <div class="events-decor__middle events-animation">
+                    <div class="events-decor__left"></div>
+                </div>
+            </div>
+
             <div class="events__img-bg img-bg">
                 <picture>
                     <source srcset="img/bg/bg-3-6000x700.jpg" type="image/jpeg" media="(min-width:3840px)">
@@ -1640,7 +1682,7 @@
             <div class="events__info">For private events please call: <span>+40 729 131 637/+40 726 458 782</span> or
                 use the contact form.</div>
         </section>
-        <section class="gallery" >
+        <section class="gallery">
             <a class="anchor" id="gallery"></a>
 
             <div class="swiper-gallery">
@@ -1675,55 +1717,59 @@
                 </div>
             </div>
         </section>
+        <section class="contact">
+            <a class="anchor" id="contact"></a>
+
+            <div class="contact__container container">
+                <h2 class="contact__h2">contact</h2>
+                <div class="line">
+                    <hr>
+                </div>
+                <div class="contact__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit
+                    maximus,
+                    molestie est a, tempor magna.</div>
+                <div class="contact__form">
+                    <form action="" class="form">
+                        <ul class="form__list">
+                            <li class="form__input">
+                                <input placeholder="Name" type="text" class="input-item">
+                            </li>
+                            <li class="form__input">
+                                <input placeholder="Email" type="email" class="input-item">
+                            </li>
+                            <li class="form__input">
+                                <input placeholder="Phone" type="phone" class="input-item">
+                            </li>
+                        </ul>
+                        <textarea class="input-item form__message" placeholder="Message" type="text"></textarea>
+                        <div class="form__contacts">
+                            <ul class="form__links">
+                                <li class="form__link">
+                                    <span class="contact__icon"></span>
+                                    5th London Boulevard, U.K
+                                </li>
+                                <li class="form__link">
+                                    <span class="contact__icon"></span>
+                                    +40 729 131 637/ +40 726 458 782
+                                </li>
+                                <li class="form__link">
+                                    <span class="contact__icon"></span>
+                                    office@mindblister.com
+                                </li>
+                            </ul>
+                            <button class="contact__button button button_color">SEND MESSAGE</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d13045.014690159502!2d33.357120192506414!3d35.175229491690715!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1631527479178!5m2!1sru!2sru"
+                width="100%" height="469" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </section>
+
     </main>
     <script src="js/pagination.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
-    <section class="contact" id="contact">
-        <div class="contact__container container">
-            <h2 class="contact__h2">contact</h2>
-            <div class="line">
-                <hr>
-            </div>
-            <div class="contact__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus,
-                molestie est a, tempor magna.</div>
-            <div class="contact__form">
-                <form action="" class="form">
-                    <ul class="form__list">
-                        <li class="form__input">
-                            <input placeholder="Name" type="text" class="input-item">
-                        </li>
-                        <li class="form__input">
-                            <input placeholder="Email" type="email" class="input-item">
-                        </li>
-                        <li class="form__input">
-                            <input placeholder="Phone" type="phone" class="input-item">
-                        </li>
-                    </ul>
-                    <textarea class="input-item form__message" placeholder="Message" type="text"></textarea>
-                    <div class="form__contacts">
-                        <ul class="form__links">
-                            <li class="form__link">
-                                <span class="contact__icon"></span>
-                                5th London Boulevard, U.K
-                            </li>
-                            <li class="form__link">
-                                <span class="contact__icon"></span>
-                                +40 729 131 637/ +40 726 458 782
-                            </li>
-                            <li class="form__link">
-                                <span class="contact__icon"></span>
-                                office@mindblister.com
-                            </li>
-                        </ul>
-                        <button class="contact__button button button_color">SEND MESSAGE</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d13045.014690159502!2d33.357120192506414!3d35.175229491690715!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1631527479178!5m2!1sru!2sru"
-            width="100%" height="469" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    </section>
     <footer class="footer">
         <div class="footer__text">© Copyright <span>Mindblister</span> 2019</div>
     </footer>
