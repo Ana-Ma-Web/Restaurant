@@ -1202,9 +1202,11 @@ opacity: 1;
          margin-top: auto;
          margin-bottom: 7%;
       }
-
    }
 
+   .home-decor__main-middle_right{
+      display: none;
+   }
 
    .content{
       justify-content: center;
@@ -1275,22 +1277,12 @@ opacity: 1;
 
    .home{
       &__container {
-         // max-height: 400px;
-         padding-top: 4.69rem;
+         padding-top: 5.69rem;
       }
       &__arrow{
          display: none;
       }
-      // &__buttons{
-      //    flex-basis: auto;
-      //    margin-bottom: 7%;
-      // }
 
-      &__data{
-         // flex-basis: auto;
-         // margin-left: auto;
-         // height: 100%;
-      }
 
       &__opening-hours{
          position: absolute;
@@ -1695,6 +1687,10 @@ opacity: 1;
       }
    }
 
+   .home-decor{
+      display: none;
+   }
+
    .content{
       flex-direction: column;
       &__info{
@@ -1776,7 +1772,6 @@ opacity: 1;
       & .content{
          margin-top: 1.5rem;
          &__info{
-            // margin-bottom: 1rem;
          }
          &__images{
             max-width: 300px;
@@ -1845,5 +1840,21 @@ opacity: 1;
          height: 100%;
       }
    }
+   .home-decor__header-left_left{
+      width: 20%;
+   }
+   .home-decor__header-left_right{
+      width: 80%;
+   }
+   .home-decor__header-right_left{
+      width: 80%;
+   }
+   .home-decor__header-right_right{
+      width: 20%;
+   }
+   .home-decor__main-middle{
+      width: 82%;
+   }
+
 }
 

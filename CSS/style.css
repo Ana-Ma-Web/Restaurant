@@ -1483,6 +1483,9 @@ input::placeholder, select::placeholder {
     margin-top: auto;
     margin-bottom: 7%;
   }
+  .home-decor__main-middle_right {
+    display: none;
+  }
   .content {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
@@ -1536,7 +1539,7 @@ input::placeholder, select::placeholder {
     top: 0;
   }
   .home__container {
-    padding-top: 4.69rem;
+    padding-top: 5.69rem;
   }
   .home__arrow {
     display: none;
@@ -1913,6 +1916,9 @@ input::placeholder, select::placeholder {
     right: 1rem;
     top: 34%;
   }
+  .home-decor {
+    display: none;
+  }
   .content {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2044,5 +2050,20 @@ input::placeholder, select::placeholder {
   }
   .home__container {
     height: 100%;
+  }
+  .home-decor__header-left_left {
+    width: 20%;
+  }
+  .home-decor__header-left_right {
+    width: 80%;
+  }
+  .home-decor__header-right_left {
+    width: 80%;
+  }
+  .home-decor__header-right_right {
+    width: 20%;
+  }
+  .home-decor__main-middle {
+    width: 82%;
   }
 }
