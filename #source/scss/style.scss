@@ -117,6 +117,11 @@ body.dark-theme{
    border-width: 1px;
    border-style: solid;
    cursor: pointer;
+   &:focus-visible{
+      outline: 1px solid var(--first-color);
+      background-color: transparent;
+   }
+
 
    &_color {
       background-color: var(--first-color);
@@ -197,7 +202,8 @@ body.dark-theme{
          color: var(--first-color);
       }
       &:focus-visible{
-         outline: 1px solid var(--first-color);
+         outline: 1px solid var(--text-color-light);
+         background-color: transparent;
       }
    }
 
@@ -267,9 +273,9 @@ body.dark-theme{
    &::before{
       content: '';
       position: absolute;
-      left: 0;
-      bottom: -.2rem;
-      width: 100%;
+      left: .5rem;
+      bottom: .5rem;
+      width: 5rem;
       height: 3px;
       background-color: var(--text-color-light);
       border-radius: 1.5px;   
@@ -351,6 +357,10 @@ body.dark-theme{
 .social__link-twitter,
 .social__link-instagram {
    margin-bottom: 1.25rem;
+   // &:focus-visible{
+   //    outline: 1px solid var(--first-color);
+   //    background-color: transparent;
+   // }
 }
 
          // ========== HOME SOCIAL ===========
@@ -389,18 +399,23 @@ body.dark-theme{
    &:hover{
       border-color: var(--first-color);
    }
+   &:focus-visible{
+      outline: 1px solid var(--first-color);
+      background-color: transparent;
+   }
 }
 
          // ========== HOME ARROW ===========
 
-.home__arrow-link {
-   background: url('../img/icons/down-btn.svg') center no-repeat;
-   border: none;
+.home__arrow {
    opacity: 0;
+   background: url('../img/icons/down-btn.svg') center no-repeat;
    transform: scale(.3, .3);
    transition-delay: 1.6s;
    transition-duration: .7s;
-
+   &-link{
+      border: none;
+   }
 }
 
 // ========== HOME IMG BG ===========
@@ -645,28 +660,35 @@ input, select {
    width: 100%;
    background-color: var(--input-color-bg);
    color: var(--input-color-text);
-
+   &:focus-visible{
+      color: var(--first-color);
+      &::placeholder{
+         color: var(--first-color);
+      }
+   }
 }
 
-.input-item {
+.input-item{
+   border: 1px transparent solid;
    &:hover{
-      background-color: var(--first-color);
-   }
-
+      border-color: var(--first-color);
+   } 
 }
 
 .select {
-   &:hover{
-      background-color: var(--first-color);
-
-   }
-
    &__item {
       width: 16.3rem;
       background-color: transparent;
       margin-right: .7rem;
       margin-left: -0.8rem;
+   }
+   &__wrapper{
+      border: 1px transparent solid;
+      border-radius: 0.3125rem;
+      &:hover{
+         border-color: var(--first-color);
       }
+   }
 }
 
 .booking {
@@ -696,7 +718,6 @@ input, select {
    }
    & .select{
       &__item{
-         // padding: 1rem 1.31rem 1.31rem 1.31rem;
          padding-top: 1.2rem;
       }
    }
