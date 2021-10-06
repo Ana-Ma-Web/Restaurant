@@ -1122,11 +1122,6 @@ input::placeholder, select::placeholder {
   width: 100%;
 }
 
-.gallery .swiper-slide {
-  max-height: 360px;
-  max-width: 360px;
-}
-
 .contact {
   margin: 0 auto;
   text-align: center;
@@ -1650,7 +1645,9 @@ input::placeholder, select::placeholder {
   .nav__item a {
     display: block;
     height: 2rem;
-    padding-top: 1rem;
+  }
+  .nav__link {
+    padding: 0;
   }
   .nav__link:hover {
     color: var(--text-color-light);
@@ -1955,7 +1952,8 @@ input::placeholder, select::placeholder {
     height: 100vh;
   }
   .home {
-    height: 100vh;
+    min-height: 100vh;
+    min-height: -webkit-fill-availible;
   }
   .home__container {
     padding-top: 2.5rem;

@@ -835,9 +835,6 @@ opacity: 1;
       }
    }
 
-   &__container{
-   }
-
    &__content {
       position: absolute;
       opacity: 0;
@@ -925,10 +922,14 @@ opacity: 1;
 .gallery{
 }
 // ================== SWIPER =============== 
-.gallery .swiper-slide {
-   max-height: 360px;
-   max-width: 360px;
-}
+// .gallery .swiper-slide {
+//    max-height: 360px;
+//    max-width: 360px;
+//    & img{
+//       width: 360px;
+//       height: 360px;
+//    }
+// }
 
 //============== CONTACT ==================
 
@@ -1346,11 +1347,11 @@ opacity: 1;
          & a{
             display: block;
             height: 2rem;
-            padding-top: 1rem;
          }
       }
 
       &__link{
+         padding: 0;
          &:hover{
             color: var(--text-color-light);
          }
@@ -1676,9 +1677,6 @@ opacity: 1;
    .button{
       height: 2.2rem;
       width: 8rem;
-      &_alt{
-         // display: none;
-      }
    }
    .nav{
       &__list{
@@ -1687,10 +1685,11 @@ opacity: 1;
       }
    }
    .home{
-      height: 100vh;
+      min-height: 100vh;
+      min-height: -webkit-fill-availible;
+
       &__container{
          padding-top: 2.5rem;
-         // max-height: 220px;
       }
       &__opening-hours{
          display: none;
@@ -1701,7 +1700,6 @@ opacity: 1;
          margin: 0;
       }
       &__social{
-         // margin: .5rem 1.2rem 0 auto;
          position: absolute;
          right: 1rem;
          top: 34%;
@@ -1726,7 +1724,6 @@ opacity: 1;
          margin: 1rem auto 0;
       }
       &__img{
-         // text-align: left;
          width: 250px;
          &-square{
             top: 28%;
