@@ -1686,8 +1686,7 @@ opacity: 1;
    }
    .home{
       min-height: 100vh;
-      min-height: -webkit-fill-availible;
-
+      min-height: -webkit-fill-available;
       &__container{
          padding-top: 2.5rem;
       }

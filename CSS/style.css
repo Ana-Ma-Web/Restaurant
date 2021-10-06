@@ -1953,7 +1953,7 @@ input::placeholder, select::placeholder {
   }
   .home {
     min-height: 100vh;
-    min-height: -webkit-fill-availible;
+    min-height: -webkit-fill-available;
   }
   .home__container {
     padding-top: 2.5rem;
