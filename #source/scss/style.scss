@@ -1697,11 +1697,15 @@ opacity: 1;
          height: 100%;
          width: 100%;
          margin: 0;
+
       }
       &__social{
          position: absolute;
          right: 1rem;
          top: 34%;
+      }
+      &__buttons{
+         margin-bottom: 20%;
       }
    }
 

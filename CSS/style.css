@@ -1971,6 +1971,9 @@ input::placeholder, select::placeholder {
     right: 1rem;
     top: 34%;
   }
+  .home__buttons {
+    margin-bottom: 20%;
+  }
   .home-decor {
     display: none;
   }
