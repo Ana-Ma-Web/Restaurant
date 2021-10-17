@@ -134,6 +134,7 @@ section {
 picture {
   -o-object-fit: cover;
      object-fit: cover;
+  background-color: black;
 }
 
 h1, h2 {
